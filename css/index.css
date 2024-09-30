@@ -22,9 +22,41 @@ img {
 }
 body {
     margin: 0;
-    background-color: rgb(2, 0, 0);
+    background-color: rgba(35, 8, 171, 0.879);
     height: 30vh;
     width: auto;
+<<<<<<< Updated upstream
 }
 
 /* Commit test */
+=======
+    overflow-x: hidden;
+}
+.slideshow {
+    width: 100%;
+
+}
+.image-slider {
+    width: 50vh;
+    animation: scroll 30s linear infinite;
+    display: flex;
+}
+
+.image-slider img {
+    width: 40vh;
+    height: 40vh;
+    object-fit: cover;
+    margin-top: 25vh;
+    margin-right: 5vh;
+    
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-700%);
+    }
+}
+>>>>>>> Stashed changes
