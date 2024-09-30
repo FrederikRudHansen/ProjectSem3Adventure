@@ -1,0 +1,37 @@
+header{
+    height: 25vh;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    align-items: center;
+}
+
+.logo-cont{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo{
+    height: 90%;
+    width: auto;
+}
+
+.navbar{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li{
+    margin: 10%;
+}
