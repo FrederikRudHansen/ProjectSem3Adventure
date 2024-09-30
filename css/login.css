@@ -1,0 +1,73 @@
+
+.logoadventure {
+    
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.paintball {
+    height: 100vh;
+    width: 100%;
+   z-index: 1;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(2, 0, 0);
+    width: auto;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+/* Stil containeren til at placere alt i en boks */
+form {
+   position: absolute;
+   top: 60%;
+   left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stil inputfelterne til at stå under hinanden */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Stil submit-knappen */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Stil h1 for at centrere teksten */
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+
