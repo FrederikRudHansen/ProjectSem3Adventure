@@ -1,0 +1,44 @@
+body { 
+background-color: rgba(35, 8, 171, 0.879);
+overflow-x: hidden;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+margin: 0;
+}
+
+.tekst {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer {
+   
+    background-image: url("https://www.danskskovforening.dk/wp-content/uploads/2023/10/Produktionsskov-efteraar_BW-800.jpg");
+    background-size: cover;
+    width: 175vh;
+    border: 1px solid rgb(35, 8, 171, 0.879);
+    padding: 20vh;
+    margin: 10vh;
+    margin-left: -5%;
+    margin-top: 10%;
+    height: 10vh;
+    color: white;
+    font-size: larger;
+}
+.footer-text-1 {
+    margin-top: -10vh;
+}
+
+.footer-text-2 {
+    margin-top: -22vh;
+    margin-left: 150vh;
+}
+
+.image-logo {
+    z-index: 1;
+    position: absolute;
+    margin-left: 55vh;
+    margin-top: -10vh;
+}
+
