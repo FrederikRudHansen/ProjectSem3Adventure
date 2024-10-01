@@ -1,0 +1,67 @@
+header{
+    height: 25vh;
+    width: 100%;
+    background-color: rgba(0,159,253,255);
+    display: flex;
+    align-items: center;
+}
+
+.logo-cont{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo{
+    height: 90%;
+    width: auto;
+}
+
+.navbar{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-left: 10vw;
+}
+
+.navbar ul li, a{
+    margin: 10%;
+    font-family: Verdana, sans-serif;
+    font-size: 5vh;
+    text-decoration: none;
+    color: antiquewhite
+}
+
+#indaktilist, #udenaktilist {
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    height: 3.5vh;  
+    width: 22vh;
+    margin-left:1vw;
+}
+
+#indakti li:first-child, #udenakti li:first-child {
+    margin-bottom: -3vh;
+    padding-right: 5vw;
+    margin-top: 6vh;
+}
+
+#booking, #omos{
+    margin-left: -3vw;
+}
+
+#omos{
+    margin-left: -5vw;
+}

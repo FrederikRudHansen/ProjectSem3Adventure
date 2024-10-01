@@ -1,17 +1,13 @@
-
-
 header{
     height: 5vh;
     width: 100%;
 }
 
-
-
 img {
    background-repeat: no-repeat;
-   background-size: cover;
-    
+   background-size: cover;    
 }
+
 body {
     margin: 0;
     background-color: rgba(35, 8, 171, 0.879);
@@ -19,12 +15,10 @@ body {
     width: auto;
 }
 
-
-
 .slideshow {
     width: 100%;
-
 }
+
 .image-slider {
     width: 50vh;
     animation: scroll 30s linear infinite;
@@ -37,7 +31,6 @@ body {
     object-fit: cover;
     margin-top: 25vh;
     margin-right: 5vh;
-    
 }
 
 @keyframes scroll {
