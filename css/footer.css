@@ -1,6 +1,6 @@
 body { 
 background-color: rgba(35, 8, 171, 0.879);
-overflow: hidden;
+overflow-x: hidden;
 display: flex;
 flex-direction: column;
 min-height: 100vh;
@@ -21,7 +21,7 @@ margin: 0;
     padding: 20vh;
     margin: 10vh;
     margin-left: -5%;
-    margin-top: 25%;
+    margin-top: 10%;
     height: 10vh;
     color: white;
     font-size: larger;
