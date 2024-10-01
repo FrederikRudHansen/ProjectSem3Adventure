@@ -1,3 +1,4 @@
+
 header{
     height: 25vh;
     width: 100%;
@@ -19,6 +20,7 @@ header{
     height: 90%;
     width: auto;
 }
+
 
 .navbar{
     height: 100%;
@@ -47,11 +49,17 @@ header{
 #indaktilist, #udenaktilist {
     background-color: white;
     color: black;
-    border: 1px solid gray;
+    border: 0.2rem solid rgba(252,202,21,255);
     height: 3.5vh;  
     width: 22vh;
     margin-left:1vw;
+    border-radius: 2rem;
+    text-align: center;
 }
+#indaktilist:hover, #udenaktilist:hover {
+    cursor: pointer;
+}
+
 
 #indakti li:first-child, #udenakti li:first-child {
     margin-bottom: -3vh;
@@ -64,5 +72,11 @@ header{
 }
 
 #omos{
-    margin-left: -5vw;
+    margin-left: -7vw;
 }
+
+
+#indaktilist, #udenaktilist:focus {
+    border-radius: 2.5rem; /* Gør den endnu mere rund, når i fokus */
+}
+
