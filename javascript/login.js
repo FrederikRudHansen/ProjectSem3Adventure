@@ -6,7 +6,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     var password = document.getElementsByName('password')[0].value;
 
     // Tjekker om brugernavn og password matcher
-    if (username === 'medarbejder' && password === '1234') {
+    if (username === 'admin' && password === 'admin') {
         // Hvis korrekt, omdiriger til indexadmin.html
         window.location.href = '../html/indexadmin.html';
     } else {
