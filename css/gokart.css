@@ -3,7 +3,7 @@
     position: absolute;
     top: 25%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-500%, -50%);
 }
 #calendar {
     width: 900px;

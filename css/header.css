@@ -40,7 +40,8 @@ header{
 
 .navbar ul li, a{
     margin: 10%;
-    font-family: Verdana, sans-serif;
+    font-weight: 600;
+    font-family: "Comfortaa", sans-serif;
     font-size: 5vh;
     text-decoration: none;
     color: antiquewhite
@@ -79,4 +80,5 @@ header{
 #indaktilist, #udenaktilist:focus {
     border-radius: 2.5rem; /* Gør den endnu mere rund, når i fokus */
 }
+
 
