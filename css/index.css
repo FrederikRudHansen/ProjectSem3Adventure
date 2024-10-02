@@ -5,8 +5,7 @@ img {
 
 body {
     margin: 0;
-   /* background-color: rgba(0, 0, 0, 0.767); rgba(35, 8, 171, 0.879); */
-    background: linear-gradient(90deg, rgba(0,159,253,255), black);
+    background-color: rgba(0, 0, 0, 0.89);
     height: 30vh;
     width: auto;
     overflow-x: hidden;
