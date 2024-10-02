@@ -7,7 +7,7 @@ footer {
     z-index: 1;
     font-weight: 600;
     font-family: "Comfortaa", sans-serif;
-    font-size: 3.7vh;
+    font-size: 3vh;
     color: white;
 }
 
@@ -46,12 +46,12 @@ ul {
 #knap{
     margin-top: 5%;
     height: 15%;
-    width: 40%;
+    width: 30%;
     border: 0.2rem solid rgba(252,202,21,255);
     border-radius: 5%;
     background-color: black;
     color: white;
-    font-size: 3vh;
+    font-size: 2vh;
 }
 
 #knap:hover {
