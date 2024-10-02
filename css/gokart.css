@@ -1,0 +1,74 @@
+.logoadventure {
+    
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-500%, -50%);
+}
+#calendar {
+    width: 900px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+#calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#calendar-body {
+    width: 100%;
+}
+
+#calendar-body th, #calendar-body td {
+    width: 14%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+#calendar-body th, #calendar-body td:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#time-slots {
+    margin-top: 10px;
+    text-align: center;
+
+     /* Flexbox for centrering */
+     display: flex; /* Aktivér flexbox */
+     flex-direction: column; /* Arranger elementerne i en kolonne */
+     align-items: center; /* Centrer elementerne horisontalt */
+}
+
+#slots {
+    list-style-type: none; /* Fjern bullet points */
+    padding: 0; /* Fjern padding */
+    margin: 0; /* Fjern margin */
+    width: 20%;
+    transform: translateX(200%);
+    background-color: beige;
+}
+
+#slots li {
+    border: 1px solid #ccc; /* Tilføj en kantlinje */
+    padding: 10px; /* Tilføj lidt indvendig plads */
+    margin: 5px 0; /* Tilføj margin mellem tidspunkter */
+    cursor: pointer; /* Ændre musemarkøren til pointer */
+    text-align: center;
+}
+
+#slots li:hover {
+    background-color: #f0f0f0; /* Tilføj en hover effekt */
+}
+
+
+
