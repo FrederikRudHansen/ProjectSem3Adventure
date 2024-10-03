@@ -12,7 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/arkade.css">
+        <link rel="stylesheet" href="../css/OmOs.css">
     </head>
     <body>
         <header>
@@ -51,12 +51,20 @@
                     <li><a id="booking" href="booking.html">Billeder</a></li>
                     <li><a id="omos" href="OmOs.html">Om Os</a></li>
                 </ul>
-            </div>
+            <button id="Tilbage" onclick="goBack()">Tilbage</button>
         </header>
+        <div class="omos">
         <p>
-            din FREDAG
-            <br>
+            <h1>Om Os</h1>
+            <h2>Velkommen til vores website!</h2>
+            <h2>
+                Vi er en virksomhed der stræber efter at give vores kunder den bedste oplevelse når de er til en af vores aktiviteter.
+            </h2>
+            <h2>
+                Vores vision er at gøre vores aktiviteter nemme for alle, og sjove for alle. Der er dog aldergrænse, da vi vil være sikre for alles sikkerhed.
+            </h2>
         </p>
+        </div>
         <footer>
             <div class="text-cont-1">
                 <ul>
@@ -94,6 +102,10 @@
                 window.location.href = selectedValue;
             }
         });
+
+        function goBack() {
+    history.back();
+}
     </script>
 </body>
 </html>
