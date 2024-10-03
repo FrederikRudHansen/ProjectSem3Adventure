@@ -2,9 +2,11 @@ body {
     margin: 0;
    /* background-color: rgba(0, 0, 0, 0.767); rgba(35, 8, 171, 0.879); */
     background: linear-gradient(90deg, rgba(0,159,253,255), black);
-    height: 30vh;
+    height: 125vh;
     width: auto;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 
     font-weight: 600;
     font-family: "Comfortaa", sans-serif;
@@ -16,20 +18,4 @@ body {
 .omos {
     margin-top: 7%;
     text-align: center;
-}
-
-#Tilbage {
-    position: absolute;
-    top: 8%;
-    left: 89%;
-    color: white;
-    border: 0.15rem solid rgba(252,202,21,255);
-    background-color: black;
-    border-radius: 10%;
-    padding: 1rem;
-    font-size: 2vh;
-    font-weight: 1000;
-    font-family: "comfortaa", sans-serif;
-    cursor: pointer;
-
 }

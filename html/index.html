@@ -54,6 +54,7 @@
                     <li><a id="omos" href="OmOs.html">Om Os</a></li>
                 </ul>
             </div>
+            <button id="Tilbage" onclick="goBack()">Tilbage</button>
         </header>
 
         <div class="slideshow">
@@ -105,7 +106,12 @@
         </div>
     </footer>
 
-        
+    <script>
+        function goBack() {
+        history.back();
+        }
+    </script>
+
         <script src="../javascript/dropdown.js"></script>
     </body>
 </html>

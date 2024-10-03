@@ -15,5 +15,8 @@ body {
         rgba(255, 255, 255, 0) 50%, /*Idk men virker ikke uden den*/
         black 100%      /*fade farve bot*/
     );
+    font-family: "Comfortaa", sans-serif;
+    text-decoration: none;
+    color: antiquewhite
 }
 

@@ -51,6 +51,7 @@
                 <li><a id="booking" href="booking.html">Billeder</a></li>
                 <li><a id="omos" href="OmOs.html">Om Os</a></li>
             </ul>
+            <button id="Tilbage" onclick="goBack()">Tilbage</button>
         </header>
 
         <h1> 
@@ -85,6 +86,12 @@
                 <button onclick="window.location.href='login.html'" id="knap">Administrator login
             </div>
         </footer>
+
+        <script>
+            function goBack() {
+            history.back();
+            }
+        </script>
 
         <script src="../javascript/dropdown.js"></script>
     </body>
