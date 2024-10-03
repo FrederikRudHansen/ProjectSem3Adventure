@@ -89,4 +89,18 @@ header{
     border-radius: 2.5rem; /* Gør den endnu mere rund, når i fokus */
 }
 
+#Tilbage {
+    position: absolute;
+    top: 8%;
+    left: 89%;
+    color: white;
+    border: 0.15rem solid rgba(252,202,21,255);
+    background-color: black;
+    border-radius: 10%;
+    padding: 1rem;
+    font-size: 2vh;
+    font-weight: 1000;
+    font-family: "comfortaa", sans-serif;
+    cursor: pointer;
 
+}

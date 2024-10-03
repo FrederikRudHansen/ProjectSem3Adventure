@@ -31,10 +31,10 @@
                             <option value="sumo.html">Sumo Wrestling</option>
                             <option value="minigolfInde.html">Minigolf</option>
                             <option value="arkade.html">Arcade</option>
-                            <option value="gokart.hmtl" >Gokart</option>
+                            <option value="gokart.html" >Gokart</option>
                             <option value="paintball.html">Paintball</option>
                             <option value="karaoke.html">Karaoke</option>
-                            <option value="trampolin.html">Trampolin Park</option>
+                            <option value="trampoliner.html">Trampolin Park</option>
                         </select>
                     </li>
                 </div>
@@ -43,10 +43,11 @@
                     <li>
                         <select id="udenaktilist" name="udenaktilist">
                             <option>Vælg en aktivitet</option>
-                            <option value="https://www.youtube.com/watch?v=Svyy09RaJFk">Klatreskov</option>
-                            <option value="minigoldUde.html">Minigolf</option>
-                            <option value="gokartUde.html">Gokart</option>
-                            <option value="paintballUde.html">Paintball</option>
+
+                            <option value="klatrebane.html">Klatreskov</option>
+                            <option value="minigolfUde.html">Minigolf</option>
+                            <option value="gokart.html">Gokart</option>
+
                         </select>
                     </li>
                 </div>
@@ -85,23 +86,10 @@
         </footer>
 
     <script>
-        document.getElementById('indaktilist').addEventListener('change', function() {
-            var selectedValue = this.value;
-            if (selectedValue) {
-                window.location.href = selectedValue;
-            }
-        });
-
-        document.getElementById('udenaktilist').addEventListener('change', function() {
-            var selectedValue = this.value;
-            if (selectedValue) {
-                window.location.href = selectedValue;
-            }
-        });
-
         function goBack() {
-    history.back();
-}
+        history.back();
+        }
     </script>
+    <script src="../javascript/dropdown.js"></script>
 </body>
 </html>
