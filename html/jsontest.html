@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender Reservation</title>
+    <link rel="stylesheet" href="../css/kalender.css">
+</head>
+<body>
+    <h1>Vælg en dag</h1>
+    <input type="date" id="calendar" />
+    
+    <div id="time-slots"></div>
+    
+    <div id="confirmation" style="display:none;">
+        <h2>Bekræftelse</h2>
+        <p id="confirmed-time"></p>
+        <button id="confirm-button">Bekræft</button>
+    </div>
+    
+    <h2>Bookede tider</h2>
+    <div id="booked-times"></div>
+
+    <script src="../javascript/script.js"></script>
+</body>
+</html>
