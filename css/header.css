@@ -17,8 +17,8 @@ header{
 }
 
 #logo{
-    height: 90%;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 
 .navbar{
