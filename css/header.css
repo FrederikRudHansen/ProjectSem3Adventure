@@ -16,6 +16,14 @@ header{
     justify-content: center;
 }
 
+.logo-cont a {
+    height: 120%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
 #logo{
     height: auto;
     width: 100%;
