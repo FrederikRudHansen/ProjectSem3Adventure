@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/gokart.css">
+    </head>
+    <body>
+        <img class="logoadventure" src="../billeder/logoadventure.png" alt="logoadventure">
+
+        <div id="calendar">
+            <div id="calendar-header">
+              <button id="prev-month">&lt;</button>
+              <span id="month-year"></span>
+              <button id="next-month">&gt;</button>
+            </div>
+            <table id="calendar-body">
+              <thead>
+                <tr>
+                  <th>MANDAG</th>
+                  <th>TIRSDAG</th>
+                  <th>ONSDAG</th>
+                  <th>TORSDAG</th>
+                  <th>FREDAG</th>
+                  <th>LØRDAG</th>
+                  <th>SØNDAG</th>
+                </tr>
+              </thead>
+              <tbody id="days"></tbody>
+            </table>
+          </div>
+          
+          <div id="time-slots" >
+            <h3>Vælg et tidspunkt for den valgte dag:</h3>
+            <ul id="slots"></ul>
+        </div>
+        
+        <script src="../javascript/gokart.js" async defer></script>
+    </body>
+</html>

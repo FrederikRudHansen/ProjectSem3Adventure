@@ -1,0 +1,61 @@
+footer {
+    position: relative; /* Sørg for, at pseudo-elementet placeres i forhold til footeren */
+    background-color: rgb(0, 0, 0);
+    height: 40vh;
+    margin-top: 20vh;
+    display: flex;
+    z-index: 1;
+    font-weight: 600;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 3vh;
+    color: white;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../billeder/forest.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5; 
+    z-index: -1; 
+}
+
+.text-cont-1, .billedelogo, .text-cont-2 {
+    width: 33.3%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#logo {
+    height: 80%;
+    width: auto;
+}
+
+#knap{
+    margin-top: 5%;
+    height: 15%;
+    width: 30%;
+    border: 0.2rem solid rgba(252,202,21,255);
+    border-radius: 5%;
+    background-color: black;
+    color: white;
+    font-size: 2vh;
+}
+
+#knap:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
