@@ -9,19 +9,19 @@ body {
 
     font-weight: 600;
     font-family: "Comfortaa", sans-serif;
-    font-size: 1.5vh;
+    font-size: 2vh;
     text-decoration: none;
     color: antiquewhite
 }
 
-.omosconts{
+
+.billederconts{
     height: 55vh;
     width: auto;
     display: flex;
     flex-direction: row;
     text-align: center;
 }
-
 
 .streg{
     background-color: white;
@@ -31,31 +31,21 @@ body {
     border-radius: 100%;
 }
 
-.omos1,.omos2{
-    margin-top: 17vh;
+
+.bilcont1, .bilcont2{
+    height: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 48%;
-    font-size: 2.5vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
 }
 
-#Tilbage {
+#disclaimer{
     position: absolute;
-    top: 8%;
-    left: 89%;
-    color: white;
-    border: 0.15rem solid rgba(252,202,21,255);
-    background-color: black;
-    border-radius: 10%;
-    padding: 1rem;
-    font-size: 2vh;
-    font-weight: 1000;
-    font-family: "comfortaa", sans-serif;
-    cursor: pointer;
+    font-size: 1vh;
+    bottom: -4%;
 }
 
-#Tilbage:hover{
-    transform: scale(1.1);
-    transition: all 0.5s ease  ;
-}
