@@ -5,7 +5,7 @@ img {
 
 body {
     margin: 0;
-    background-color: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0,159,253,255), rgb(218, 32, 15));
     height: 30vh;
     width: auto;
     overflow-x: hidden;
@@ -30,14 +30,8 @@ body {
     height: 100%;
     pointer-events: none;
     
-    /*laver faden*/
-    background: linear-gradient(
-        to bottom,
-        black 0%,    /*fade farve top*/
-        rgba(255, 255, 255, 0) 50%, /*Idk men virker ikke uden den*/
-        rgba(255, 255, 255, 0) 50%, /*Idk men virker ikke uden den*/
-        black 100%      /*fade farve bot*/
-    );
+        background: linear-gradient(90deg, rgba(0,159,253,255), rgb(218, 32, 15));
+
 }
 
 .image-slider {
@@ -52,6 +46,7 @@ body {
     object-fit: cover;
     margin-top: 15vh;
     margin-right: 5vh;
+    box-shadow: yellow 10px 10px 10px;
 }
 
 @keyframes scroll {

@@ -5,7 +5,7 @@ header{
     display: flex;
     align-items: center;
     box-shadow: 0px 10px 20px 0px rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgba(0,159,253,255), black);
+    background: linear-gradient(90deg, rgba(0,159,253,255), rgb(218, 32, 15));
 }
 
 .logo-cont{
@@ -15,6 +15,14 @@ header{
     align-items: center;
     justify-content: center;
 }
+
+.logo-cont a {
+    height: 120%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
 
 #logo{
     height: auto;

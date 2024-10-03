@@ -19,7 +19,9 @@ body {
 }
 
 #Tilbage {
-    margin-left: 25%;
+    position: absolute;
+    top: 8%;
+    left: 89%;
     color: white;
     border: 0.15rem solid rgba(252,202,21,255);
     background-color: black;
