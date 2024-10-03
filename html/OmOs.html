@@ -1,24 +1,25 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+
 <html>
     <head>
-        <meta charset="utf-8">  
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Minigolf Indendørs</title>
+        <title>Adventure Park!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/index.css">
         <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/minigolfInde.css">
+        <link rel="stylesheet" href="../css/OmOs.css">
     </head>
-
     <body>
         <header>
             <div class="logo-cont">
-                <img src="../billeder/logoadventure.png" id="logo" alt="Adventure Logo">
+                <a href="index.html">
+                    <img src="../billeder/logoadventure.png" id="logo" alt="Adventure Logo">
+                </a>
             </div>
             <div class="navbar">
                 <ul>
@@ -42,34 +43,30 @@
                     <li>
                         <select id="udenaktilist" name="udenaktilist">
                             <option>Vælg en aktivitet</option>
+
                             <option value="klatrebane.html">Klatreskov</option>
                             <option value="minigolfUde.html">Minigolf</option>
                             <option value="gokart.html">Gokart</option>
+
                         </select>
                     </li>
                 </div>
                     <li><a id="booking" href="booking.html">Billeder</a></li>
-                    <li><a id="omos" href="omos.html">Om Os</a></li>
+                    <li><a id="omos" href="OmOs.html">Om Os</a></li>
                 </ul>
-            </div>
             <button id="Tilbage" onclick="goBack()">Tilbage</button>
         </header>
-
-        <h1> 
-
-        </h1>
-
-        <p> 
-
-        </p>
-        
-        <ul> 
-            <li> 
-
-            </li>
-        </ul>
-
-
+        <div class="omosconts">
+            <div class="omos1">
+                <h1>Om Os</h1>
+                <p>Vi er en virksomhed der stræber efter at give vores kunder<br> den bedste oplevelse når de er til en af vores aktiviteter. <br><br>Vi er 4 drenge der elsker adventure, og har derfor<br> lavet en hjemmeside hvori man kan idk man fyrer bare lort<br> af at this point, håber ikke der er nogen der skibidi toilet rent faktisk<br> læser det her lol shake ur gyat for the rizzler.</p>
+            </div>
+            <div class="streg"></div>
+            <div class="omos2">
+                <h1> Vores Vision</h1>
+                <p>Vores vision er at skabe en unik adventure park,<br> hvor mennesker i alle aldre kan opleve spænding, natur og fællesskab. <br><br>Vi ønsker at inspirere vores gæster til at udfordre sig selv<br> gennem sjove og sikre aktiviteter,<br> samtidig med at de skaber minder for livet.</p>
+            </div>
+        </div>
         <footer>
             <div class="text-cont-1">
                 <ul>
@@ -88,12 +85,11 @@
             </div>
         </footer>
 
-        <script>
-            function goBack() {
-            history.back();
-            }
-        </script>
-
-        <script src="../javascript/dropdown.js"></script>
-    </body>
+    <script>
+        function goBack() {
+        history.back();
+        }
+    </script>
+    <script src="../javascript/dropdown.js"></script>
+</body>
 </html>
