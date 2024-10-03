@@ -2,7 +2,7 @@ footer {
     position: relative; /* Sørg for, at pseudo-elementet placeres i forhold til footeren */
     background-color: rgb(0, 0, 0);
     height: 40vh;
-    margin-top: 20vh;
+    margin-top: auto;
     display: flex;
     z-index: 1;
     font-weight: 600;
