@@ -1,11 +1,10 @@
 body {
     margin: 0;
+   /* background-color: rgba(0, 0, 0, 0.767); rgba(35, 8, 171, 0.879); */
     background: linear-gradient(90deg, rgba(0,159,253,255), black);
-    height: 125vh;
+    height: 30vh;
     width: auto;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
 
     font-weight: 600;
     font-family: "Comfortaa", sans-serif;
@@ -14,35 +13,14 @@ body {
     color: antiquewhite
 }
 
-.omosconts{
-    height: 55vh;
-    width: auto;
-    display: flex;
-    flex-direction: row;
+.omos {
+    margin-top: 7%;
     text-align: center;
-}
-
-
-.streg{
-    background-color: white;
-    margin-top: 5%;
-    height: 100%;
-    width: .2%;
-    border-radius: 100%;
-}
-
-.omos1,.omos2{
-    margin-top: 17vh;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 48%;
-    font-size: 2.5vh;
 }
 
 #Tilbage {
     position: absolute;
-    top: 9%;
+    top: 8%;
     left: 89%;
     color: white;
     border: 0.15rem solid rgba(252,202,21,255);
