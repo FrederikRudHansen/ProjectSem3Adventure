@@ -1,6 +1,5 @@
 body {
     margin: 0;
-   /* background-color: rgba(0, 0, 0, 0.767); rgba(35, 8, 171, 0.879); */
     background: linear-gradient(90deg, rgba(0,159,253,255), black);
     height: 30vh;
     width: auto;
@@ -13,14 +12,26 @@ body {
     color: antiquewhite
 }
 
-.omos {
-    margin-top: 7%;
+.omosconts{
+    height: 35vh;
+    width: auto;
+    display: flex;
+    flex-direction: row;
     text-align: center;
+}
+
+.omos1,.omos2{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    font-size: 2.5vh;
 }
 
 #Tilbage {
     position: absolute;
-    top: 8%;
+    top: 9%;
     left: 89%;
     color: white;
     border: 0.15rem solid rgba(252,202,21,255);

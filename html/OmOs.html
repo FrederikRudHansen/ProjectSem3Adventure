@@ -17,7 +17,9 @@
     <body>
         <header>
             <div class="logo-cont">
-                <img src="../billeder/logoadventure.png" id="logo" alt="Adventure Logo">
+                <a href="index.html">
+                    <img src="../billeder/logoadventure.png" id="logo" alt="Adventure Logo">
+                </a>
             </div>
             <div class="navbar">
                 <ul>
@@ -25,7 +27,7 @@
                     <li>Indendørs Aktiviteter</li>
                     <li>
                         <select id="indaktilist" name="indaktilist">
-                            <option >Select an activity</option>
+                            <option >Vælg en aktivitet</option>
                             <option value="sumo.html">Sumo Wrestling</option>
                             <option value="minigolfInde.html">Minigolf</option>
                             <option value="arkade.html">Arcade</option>
@@ -40,7 +42,7 @@
                     <li>Udendørs Aktiviteter</li>
                     <li>
                         <select id="udenaktilist" name="udenaktilist">
-                            <option>Select an activity</option>
+                            <option>Vælg en aktivitet</option>
                             <option value="https://www.youtube.com/watch?v=Svyy09RaJFk">Klatreskov</option>
                             <option value="minigoldUde.html">Minigolf</option>
                             <option value="gokartUde.html">Gokart</option>
@@ -53,17 +55,15 @@
                 </ul>
             <button id="Tilbage" onclick="goBack()">Tilbage</button>
         </header>
-        <div class="omos">
-        <p>
-            <h1>Om Os</h1>
-            <h2>Velkommen til vores website!</h2>
-            <h2>
-                Vi er en virksomhed der stræber efter at give vores kunder den bedste oplevelse når de er til en af vores aktiviteter.
-            </h2>
-            <h2>
-                Vores vision er at gøre vores aktiviteter nemme for alle, og sjove for alle. Der er dog aldergrænse, da vi vil være sikre for alles sikkerhed.
-            </h2>
-        </p>
+        <div class="omosconts">
+            <div class="omos1">
+                <h1>Om Os</h1>
+                <p>Vi er en virksomhed der stræber efter at give vores kunder<br> den bedste oplevelse når de er til en af vores aktiviteter. <br><br>Vi er 4 drenge der elsker adventure, og har derfor<br> lavet en hjemmeside hvori man kan idk man fyrer bare lort<br> af at this point, håber ikke der er nogen der skibidi toilet rent faktisk<br> læser det her lol shake ur gyat for the rizzler.</p>
+            </div>
+            <div class="omos2">
+                <h1> Vores Vision</h1>
+                <p>Vores vision er at skabe en unik adventure park,<br> hvor mennesker i alle aldre kan opleve spænding, natur og fællesskab. <br><br>Vi ønsker at inspirere vores gæster til at udfordre sig selv<br> gennem sjove og sikre aktiviteter,<br> samtidig med at de skaber minder for livet.</p>
+            </div>
         </div>
         <footer>
             <div class="text-cont-1">
@@ -78,15 +78,10 @@
                 <img  src="../billeder/logoadventure.png" alt="" id="logo"> 
             </div>
             <div class="text-cont-2">
-                <ul>
-                    <li>Kontaktinformation:</li>
-                    <li>📞+45 6178 6667</li>
-                    <li>📧adventurepark@gmail.com</li>
-                    <li>📍Rådhusdammen 122 2620 Albertslund</li>
-                </ul>
+                Medarbejder login:
+                <button onclick="window.location.href='login.html'" id="knap">Administrator login
             </div>
         </footer>
-    </div>
 
     <script>
         document.getElementById('indaktilist').addEventListener('change', function() {
