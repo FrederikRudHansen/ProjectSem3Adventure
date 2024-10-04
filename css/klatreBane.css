@@ -8,15 +8,6 @@ body {
     min-height: 100vh;
     background-color: rgb(0, 0, 0);
     font-family: "Comfortaa", sans-serif;
-    
-    background: linear-gradient(
-        to bottom,
-        black 0%,    /*fade farve top*/
-        rgba(255, 255, 255, 0) 50%, /*Idk men virker ikke uden den*/
-        rgba(255, 255, 255, 0) 50%, /*Idk men virker ikke uden den*/
-        black 100%      /*fade farve bot*/
-    );
-    font-family: "Comfortaa", sans-serif;
     text-decoration: none;
     color: antiquewhite
    

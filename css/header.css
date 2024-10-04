@@ -67,6 +67,8 @@ header{
 }
 #indaktilist:hover, #udenaktilist:hover {
     cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s ease  ;
 }
 
 

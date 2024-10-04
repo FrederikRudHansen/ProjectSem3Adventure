@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    background: linear-gradient(90deg, rgba(0,159,253,255), black);
+    height: 145vh;
+    width: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 600;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 2vh;
+    text-decoration: none;
+    color: antiquewhite
+}
+
+
+.billederconts{
+    height: 55vh;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.streg{
+    background-color: white;
+    margin-top: 5%;
+    height: 100%;
+    width: .2%;
+    border-radius: 100%;
+}
+
+
+.bilcont1, .bilcont2{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+#disclaimer{
+    position: absolute;
+    font-size: 1vh;
+    bottom: -4%;
+}
+

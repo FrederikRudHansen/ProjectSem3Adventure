@@ -1,20 +1,20 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+
 <html>
     <head>
-        <meta charset="utf-8">  
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Arkade</title>
+        <title>Adventure Park!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/index.css">
         <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/arkade.css">
+        <link rel="stylesheet" href="../css/billeder.css">
     </head>
-
+    
     <body>
         <header>
             <div class="logo-cont">
@@ -28,6 +28,7 @@
                     <li>Indendørs Aktiviteter</li>
                     <li>
                         <select id="indaktilist" name="indaktilist">
+
                             <option >Vælg en aktivitet</option>
                             <option value="sumo.html">Sumo Wrestling</option>
                             <option value="minigolfInde.html">Minigolf</option>
@@ -50,33 +51,27 @@
                         </select>
                     </li>
                 </div>
-                    <li><a id="booking" href="booking.html">Billeder</a></li>
-                    <li><a id="omos" href="omos.html">Om Os</a></li>
+                    <li><a id="billeder" href="billeder.html">Billeder</a></li>
+                    <li><a id="omos" href="OmOs.html">Om Os</a></li>
                 </ul>
             </div>
             <button id="Tilbage" onclick="goBack()">Tilbage</button>
         </header>
+        <div class="billederconts">
+            <div class="bilcont1">
+                <h1>Se Hyggen Her 👉</h1>
+                <h2>velkommen til vores billedeside!<br>Her uploades billeder fra aktiviteter sendt fra jer!<br><br></h2>
+                <h1>Send Dine Billeder!</h1>
+                <h2>Send dine billeder til vores mail, og få chancen for at blive uploadet til vores side!<br></h2>
+                <p id="disclaimer">DISCLAIMER: Alle billeder kan og vil blive brugt til identitetsforfalskning samt AI træning i dødelig eliminering<br> af specifikke ansigtstræk. Upload af billeder vil med sikkerhed medføre traumer senere i livet.</p>
+            </div>
+            <div class="streg"></div>
+            <div class="bilcont2">
+                idkidkidk
+            </div>
+        </div>
 
-        <h1> 
-            Velkommen til vores Arkade!
-        </h1>
-
-        <p> 
-            Tag forbi vores kæmpe arkade og prøv nogle af de mange spillemaskiner! 
-            Du kan vinde præmier ud fra alle dine point du indtjener i vores arkade.
-            Det er en arkade for store og endda til små, så der er noget for hver en smag!
-            Vi glæder os til at se jer, og byde jer til en masse gang spil i vores kæmpe arkade!
-        </p>
-        
-        <ul> 
-            <li> Aldersgrænse: 6+ år, alt under skal være under opsyn af en forældre. </li>
-            <li> Starttider: åbent fra kl 10:00 - 22:00. </li>
-            <li> Minimum højde: Der er heldigvis ikke nogle minimum højde for at komme ind, men der kan være til de forskellige maskiner. </li>
-            <li> Tidslængde: Du kan være her så længe vi har åbent. </li>
-            <li> Udstyr: I får udleveret et kort, hvor i indsætter de spillepenge i nu har lyst til at spille for. </li>
-            <li> Årstid: Tilgængelig hele året rundt. </li>
-        </ul>
-
+        <!-- kode her -->
 
         <footer>
             <div class="text-cont-1">
@@ -95,12 +90,13 @@
                 <button onclick="window.location.href='login.html'" id="knap">Administrator login
             </div>
         </footer>
+    
         <script>
             function goBack() {
             history.back();
             }
         </script>
-
-        <script src="../javascript/dropdown.js"></script>
-    </body>
-</html>
+    
+            <script src="../javascript/dropdown.js"></script>
+        </body>
+    </html>
