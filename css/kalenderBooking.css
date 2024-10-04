@@ -1,0 +1,25 @@
+.time-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .time-slots button {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  #confirm-button {
+    display: none;
+  }
+  
+  #bookings {
+    margin-top: 20px;
+  }
+  
+  .booking-item {
+    padding: 10px;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+  }
+  

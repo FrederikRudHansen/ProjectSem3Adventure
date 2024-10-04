@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Kalender</title>
+  <link rel="stylesheet" href="../css/kalenderBooking.css"> <!-- Link til CSS -->
+</head>
+<body>
+  <h1>Vælg en dato og et tidspunkt</h1>
+  <input type="date" id="booking-date">
+  <div id="time-selection" style="display:none;">
+    <h2>Vælg et tidspunkt</h2>
+    <div class="time-slots">
+      <!-- Tidsknapper vil blive genereret her -->
+    </div>
+  </div>
+  <button id="confirm-button">Bekræft</button>
+
+  <div id="bookings">
+    <h2>Dine Bookinger</h2>
+    <div id="bookings-list">
+      <!-- Bookings vil blive vist her -->
+    </div>
+  </div>
+
+  <script src="../javascript/gokartkalender.js"></script> <!-- Link til JavaScript -->
+</body>
+</html>
