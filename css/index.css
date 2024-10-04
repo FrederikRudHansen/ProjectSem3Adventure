@@ -1,11 +1,6 @@
-img {
-   background-repeat: no-repeat;
-   background-size: cover;    
-}
-
 body {
     margin: 0;
-    background: linear-gradient(90deg, rgba(0,159,253,255), rgb(218, 32, 15));
+    background: linear-gradient(90deg, rgba(0,159,253,255), rgb(0, 0, 0));
     height: 30vh;
     width: auto;
     overflow-x: hidden;
@@ -30,7 +25,7 @@ body {
     height: 100%;
     pointer-events: none;
     
-        background: linear-gradient(90deg, rgba(0,159,253,255), rgb(218, 32, 15));
+        background: linear-gradient(90deg, rgba(0,159,253,255), rgb(0, 0, 0));
 
 }
 
