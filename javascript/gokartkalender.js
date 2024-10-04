@@ -38,30 +38,53 @@ confirmButton.addEventListener('click', () => {
   let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
   const newBooking = {
     date: selectedDate,
-    time: selectedTime
+    time: selectedTime,
+    timestamp: new Date(`${dateInput.value} ${selectedTime}`).getTime() // Gem en timestamp for sortering
   };
   bookings.push(newBooking);
   localStorage.setItem('bookings', JSON.stringify(bookings));
 
   // Opdater listen af bookinger
-  addBookingToList(newBooking);
+  displaySortedBookings();
   alert(`Du har booket: ${booking}`);
 });
 
-// Tilføj en booking til visningen
-function addBookingToList(booking) {
+// Tilføj en booking til visningen med sletteknap
+function addBookingToList(booking, index) {
   const bookingItem = document.createElement('div');
   bookingItem.classList.add('booking-item');
   bookingItem.textContent = `${booking.date} kl ${booking.time}`;
+
+  // Opret en "Slet"-knap for hver booking
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Slet';
+  deleteButton.style.marginLeft = '10px';
+  deleteButton.addEventListener('click', () => deleteBooking(index));
+
+  bookingItem.appendChild(deleteButton);
   bookingsList.appendChild(bookingItem);
 }
 
-// Hent og vis eksisterende bookinger ved indlæsning
-function loadBookings() {
-  const savedBookings = JSON.parse(localStorage.getItem('bookings')) || [];
+// Slet en booking fra listen og localStorage
+function deleteBooking(index) {
+  let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+  bookings.splice(index, 1); // Fjern booking på den angivne indeks
+  localStorage.setItem('bookings', JSON.stringify(bookings)); // Opdater localStorage
+  displaySortedBookings(); // Opdater visningen
+}
+
+// Hent og vis eksisterende bookinger i sorteret rækkefølge
+function displaySortedBookings() {
+  bookingsList.innerHTML = ''; // Ryd listen
+  let savedBookings = JSON.parse(localStorage.getItem('bookings')) || [];
+  
+  // Sorter bookingerne efter timestamp (dato og tid)
+  savedBookings.sort((a, b) => a.timestamp - b.timestamp);
+  
+  // Vis de sortered bookinger med indeks
   savedBookings.forEach(addBookingToList);
 }
 
 // Start ved at generere tidsknapperne og vise eksisterende bookinger
 generateTimeSlots();
-loadBookings();
+displaySortedBookings();
