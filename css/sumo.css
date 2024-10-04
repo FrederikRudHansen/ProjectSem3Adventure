@@ -11,3 +11,16 @@ body {
     color: antiquewhite
 }
 
+#button {
+    margin-top: 64%;
+    margin-left: -78%;
+    color: white;
+    border: 0.15rem solid rgba(252,202,21,255);
+    background-color: black;
+    border-radius: 10%;
+    padding: 1rem;
+    font-size: 2vh;
+    font-weight: 1000;
+    font-family: "comfortaa", sans-serif;
+    cursor: pointer;
+}
