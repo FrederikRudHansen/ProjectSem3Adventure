@@ -1,29 +1,114 @@
-.time-slots {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .time-slots button {
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  #confirm-button {
-    display: none;
-  }
-  
-  #bookings {
-    margin-top: 20px;
-  }
-  
-  .booking-item {
-    padding: 10px;
-    background-color: #f1f1f1;
-    margin-bottom: 10px;
-  }
-  
-  #container {
-    height: 50vh;
+/* ../css/kalenderBooking.css */
+body {
+  -ms-overflow-style: none;  /* Skjul scrollbar i Internet Explorer og Edge */
+  scrollbar-width: none;  /* Skjul scrollbar i Firefox */
+  color: white ;
+  overflow-x: hidden ;
+}
 
-  }
+body::-webkit-scrollbar {
+  display: none;  /* Skjul scrollbar i Chrome, Safari og Opera */
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-slots button {
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  width: 20vh;
+}
+
+
+#confirm-button {
+  
+  margin-left: 20px;
+  padding: 10px;
+  display: none;
+}
+
+#bookings {
+  margin-top: 20px;
+  
+}
+
+.booking-item {
+  display: inline-block;
+  padding: 10px;
+  width: 20vh;
+  background-color: black;
+  margin-bottom: 10px;
+  border-radius: 2rem;
+  border: 0.2rem solid rgba(252,202,21,255);
+  margin: 1vh;
+  
+}
+
+#calendar-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#calendar-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.calendar-day {
+  padding: 10px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+}
+
+.calendar-day:hover {
+  background-color: #bbb;
+}
+
+#current-month {
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: black;
+  width: 20vh;
+  text-align: center;
+  border:  0.2rem solid rgba(252,202,21,255);
+  border-radius: 2rem;
+}
+
+#prev-month {
+  cursor: pointer;
+
+}
+#next-month {
+  cursor: pointer;
+  margin-right: 1vh;
+
+}
+
+#selected-date {
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: black;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  border:  0.2rem solid rgba(252,202,21,255);
+}
+
+#time-selection {
+  width: 99.7%;
+}
+
+.fakeboks {
+  height: 25vh;
+}
