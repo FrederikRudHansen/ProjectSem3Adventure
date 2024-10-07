@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Kalender</title>
+  <link rel="stylesheet" href="../css/kalenderBooking.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <header>
+        <div class="logo-cont">
+            <a href="index.html">
+                <img src="../billeder/logoadventure.png" id="logo" alt="Adventure Logo">
+            </a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <div id="indakti">
+                    <li>Indendørs Aktiviteter</li>
+                    <li>
+                        <select id="indaktilist" name="indaktilist">
+                            <option>Vælg en aktivitet</option>
+                            <option value="sumo.html">Sumo Wrestling</option>
+                            <option value="minigolfInde.html">Minigolf</option>
+                            <option value="arkade.html">Arcade</option>
+                            <option value="gokart.html">Gokart</option>
+                            <option value="paintball.html">Paintball</option>
+                            <option value="karaoke.html">Karaoke</option>
+                            <option value="trampoliner.html">Trampolin Park</option>
+                        </select>
+                    </li>
+                </div>
+                <div id="udenakti">
+                    <li>Udendørs Aktiviteter</li>
+                    <li>
+                        <select id="udenaktilist" name="udenaktilist">
+                            <option>Vælg en aktivitet</option>
+                            <option value="klatrebane.html">Klatreskov</option>
+                            <option value="minigolfUde.html">Minigolf</option>
+                            <option value="gokart.html">Gokart</option>
+                            <option value="paintballUde.html">Udendørs Paintball</option>
+                        </select>
+                    </li>
+                </div>
+                <li><a id="booking" href="booking.html">Billeder</a></li>
+                <li><a id="omos" href="omos.html">Om Os</a></li>
+            </ul>
+        </div>
+        <button id="Tilbage" onclick="goBack()">Tilbage</button>
+    </header>
+
+    <h1>Vælg en dato og et tidspunkt</h1>
+    <div id="calendar-controls">
+        <button id="prev-month">&#9664;</button>
+        <span id="current-month"></span>
+        <button id="next-month">&#9654;</button>
+    </div>
+    <div id="calendar-container"></div>
+    <div id="time-selection" style="display:none;">
+        <h2 id="selected-date"></h2>
+        <h2>Vælg et tidspunkt</h2>
+        <div class="time-slots"></div>
+        <h2 id="selected-time" style="display:none;"></h2> 
+    </div>
+    <button id="confirm-button">Bekræft</button>
+
+    <div id="bookings"> 
+        <h2>GoKart indendørs reservationer</h2>
+        <div id="bookings-list"></div>
+    </div>
+    <div class="fakeboks">
+
+    </div>
+
+    <footer>
+        <div class="text-cont-1">
+            <ul>
+                <li>Kontaktinformation:</li>
+                <li>📞+45 6178 6667</li>
+                <li>📧adventurepark@gmail.com</li>
+                <li>📍Rådhusdammen 122 2620 Albertslund</li>
+            </ul>
+        </div>
+        <div class="billedelogo">
+            <img src="../billeder/logoadventure.png" alt="" id="logo">
+        </div>
+        <div class="text-cont-2">
+            Medarbejder login:
+            <button onclick="window.location.href='login.html'" id="knap">Administrator login</button>
+        </div>
+    </footer>
+
+    <script src="../javascript/jsbooking/gokartindebooking.js"></script>
+</body>
+</html>
