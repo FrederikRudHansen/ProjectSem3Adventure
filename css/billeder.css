@@ -23,16 +23,7 @@ body {
     text-align: center;
 }
 
-.streg{
-    background-color: white;
-    margin-top: 5%;
-    height: 100%;
-    width: .2%;
-    border-radius: 100%;
-}
-
-
-.bilcont1, .bilcont2{
+.bilcont1{
     height: 100%;
     width: 50%;
     display: flex;
@@ -43,9 +34,53 @@ body {
     margin-top: 5%;
 }
 
+.bilcont2 {
+    height: 100%;
+    width: 46%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); 
+    grid-gap: 2%;
+    padding: 2%;
+    margin-top: 1%;
+}
+
 #disclaimer{
     position: absolute;
     font-size: 1vh;
     bottom: -4%;
 }
 
+.streg{
+    background-color: white;
+    margin-top: 5%;
+    height: 100%;
+    width: .2%;
+    border-radius: 100%;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    border-radius: 5%;
+}
+
+.uploadButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#uploadButt{
+    height: 10vh;
+    width: 80%;
+    border: 0.15rem solid rgba(252,202,21,255);
+    color: white;
+    background-color: black;
+    border-radius: 10%;
+    font-size: 2.5vh;
+    font-weight: 1000;
+    font-family: "comfortaa", sans-serif;
+    cursor: pointer;
+}
