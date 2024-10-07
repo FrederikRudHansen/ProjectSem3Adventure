@@ -1,26 +1,23 @@
 body {
     margin: 0;
+   /* background-color: rgba(0, 0, 0, 0.767); rgba(35, 8, 171, 0.879); */
     background: linear-gradient(90deg, rgba(0,159,253,255), black);
-    height: 145vh;
+    height: 125vh;
     width: auto;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
 
     font-weight: 600;
     font-family: "Comfortaa", sans-serif;
     font-size: 1.5vh;
     text-decoration: none;
-    color: antiquewhite
+    color: white;
 }
 
-.omosconts{
-    height: 55vh;
-    width: auto;
-    display: flex;
-    flex-direction: row;
+.omos {
+    margin-top: 7%;
     text-align: center;
 }
+
 
 .streg{
     background-color: white;
@@ -37,4 +34,3 @@ body {
     height: 100%;
     width: 48%;
     font-size: 2.5vh;
-}
