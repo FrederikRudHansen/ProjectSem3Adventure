@@ -10,7 +10,7 @@ body {
     font-family: "Comfortaa", sans-serif;
     font-size: 1.5vh;
     text-decoration: none;
-    color: antiquewhite
+    color: white;
 }
 
 .omos {
@@ -18,22 +18,19 @@ body {
     text-align: center;
 }
 
-#Tilbage {
-    position: absolute;
-    top: 8%;
-    left: 89%;
-    color: white;
-    border: 0.15rem solid rgba(252,202,21,255);
-    background-color: black;
-    border-radius: 10%;
-    padding: 1rem;
-    font-size: 2vh;
-    font-weight: 1000;
-    font-family: "comfortaa", sans-serif;
-    cursor: pointer;
+
+.streg{
+    background-color: white;
+    margin-top: 5%;
+    height: 100%;
+    width: .2%;
+    border-radius: 100%;
 }
 
-#Tilbage:hover{
-    transform: scale(1.1);
-    transition: all 0.5s ease  ;
-}
+.omos1,.omos2{
+    margin-top: 17vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 48%;
+    font-size: 2.5vh;

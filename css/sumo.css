@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    color: white;
     height: 125vh;
     width: auto;
     overflow-x: hidden;
@@ -8,7 +9,8 @@ body {
     min-height: 100vh;
     font-family: "Comfortaa", sans-serif;
     text-decoration: none;
-    color: antiquewhite
+    background: linear-gradient(90deg, rgba(0,159,253,255), rgb(0, 0, 0));
+ 
 }
 
 #button {
