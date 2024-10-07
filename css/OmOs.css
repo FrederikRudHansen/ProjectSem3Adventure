@@ -1,11 +1,9 @@
 body {
     margin: 0;
-   /* background-color: rgba(0, 0, 0, 0.767); rgba(35, 8, 171, 0.879); */
     background: linear-gradient(90deg, rgba(0,159,253,255), black);
     height: 125vh;
     width: auto;
     overflow-x: hidden;
-
     font-weight: 600;
     font-family: "Comfortaa", sans-serif;
     font-size: 1.5vh;
@@ -13,16 +11,17 @@ body {
     color: white;
 }
 
-.omos {
-    margin-top: 7%;
-    text-align: center;
+.omosconts{
+   height: 75vh;
+   width: auto;
+   display: flex;
+   flex-direction: row;
 }
-
 
 .streg{
     background-color: white;
-    margin-top: 5%;
-    height: 100%;
+    margin-top: 4%;
+    height: 80%;
     width: .2%;
     border-radius: 100%;
 }
@@ -34,3 +33,5 @@ body {
     height: 100%;
     width: 48%;
     font-size: 2.5vh;
+    text-align: center;
+}

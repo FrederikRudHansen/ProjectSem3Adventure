@@ -1,23 +1,60 @@
 body {
     margin: 0;
-    color: white;
+    background: linear-gradient(90deg, rgba(0,159,253,255), black);
     height: 125vh;
     width: auto;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-weight: 600;
     font-family: "Comfortaa", sans-serif;
+    font-size: 1.5vh;
     text-decoration: none;
-    background: linear-gradient(90deg, rgba(0,159,253,255), rgb(0, 0, 0));
- 
+    color: white;
 }
 
+.sumoconts{
+   height: 75vh;
+   width: auto;
+   display: flex;
+   flex-direction: row;
+}
+
+.streg{
+    background-color: white;
+    margin-top: 4%;
+    height: 80%;
+    width: .2%;
+    border-radius: 100%;
+}
+
+.sumo1{
+    margin-top: 17vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 49%;
+    font-size: 2.5vh;
+    align-items: center;
+    text-align: center;
+}
+
+.sumo2{
+    margin-top: 17vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 49%;
+    font-size: 2.5vh; 
+}
+
+span{
+    color:rgba(252,202,21,255);
+}
+
+
 #button {
-    margin-top: 64%;
-    margin-left: -78%;
     color: white;
-    border: 0.15rem solid rgba(252,202,21,255);
+    border: 0.2rem solid rgba(252,202,21,255);
     background-color: black;
     border-radius: 10%;
     padding: 1rem;
@@ -25,4 +62,5 @@ body {
     font-weight: 1000;
     font-family: "comfortaa", sans-serif;
     cursor: pointer;
+    width: 20%;
 }
