@@ -82,14 +82,14 @@ confirmButton.addEventListener('click', () => {
   const selectedDate = confirmButton.getAttribute('data-date');
   const selectedTime = confirmButton.getAttribute('data-time');
   const booking = `${selectedDate} kl ${selectedTime}`;
-  let bookings = JSON.parse(localStorage.getItem('minigolfBookings')) || [];
+  let bookings = JSON.parse(localStorage.getItem('karaokeBookings')) || [];
   const newBooking = {
     date: selectedDate,
     time: selectedTime,
     timestamp: new Date(`${currentYear}-${currentMonth + 1}-${selectedDate.split(' ')[1]} ${selectedTime}`).getTime()
   };
   bookings.push(newBooking);
-  localStorage.setItem('minigolfBookings', JSON.stringify(bookings));
+  localStorage.setItem('karaokeBookings', JSON.stringify(bookings));
   displaySortedBookings();
   alert(`Du har booket: ${booking}`);
 });
@@ -107,15 +107,15 @@ function addBookingToList(booking, index) {
 }
 
 function deleteBooking(index) {
-  let bookings = JSON.parse(localStorage.getItem('minigolfBookings')) || [];
+  let bookings = JSON.parse(localStorage.getItem('karaokeBookings')) || [];
   bookings.splice(index, 1);
-  localStorage.setItem('minigolfBookings', JSON.stringify(bookings));
+  localStorage.setItem('karaokeBookings', JSON.stringify(bookings));
   displaySortedBookings();
 }
 
 function displaySortedBookings() {
   bookingsList.innerHTML = '';
-  let savedBookings = JSON.parse(localStorage.getItem('minigolfBookings')) || [];
+  let savedBookings = JSON.parse(localStorage.getItem('karaokeBookings')) || [];
   savedBookings.sort((a, b) => a.timestamp - b.timestamp);
   savedBookings.forEach(addBookingToList);
 }
