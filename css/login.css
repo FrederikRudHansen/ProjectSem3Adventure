@@ -1,7 +1,6 @@
 
 
 .logoadventure {
-    
     position: absolute;
     top: 25%;
     left: 50%;
@@ -26,7 +25,7 @@ body {
 /* Stil containeren til at placere alt i en boks */
 form {
    position: absolute;
-   top: 60%;
+   top: 70%;
    left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;

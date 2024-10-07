@@ -1,13 +1,66 @@
 body {
     margin: 0;
+    background: linear-gradient(90deg, rgba(0,159,253,255), black);
     height: 125vh;
     width: auto;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-weight: 600;
     font-family: "Comfortaa", sans-serif;
+    font-size: 1.5vh;
     text-decoration: none;
-    color: antiquewhite
+    color: white;
 }
 
+.minigolfconts{
+   height: 75vh;
+   width: auto;
+   display: flex;
+   flex-direction: row;
+}
+
+.streg{
+    background-color: white;
+    margin-top: 4%;
+    height: 80%;
+    width: .2%;
+    border-radius: 100%;
+}
+
+.mini1{
+    margin-top: 17vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 49%;
+    font-size: 2.5vh;
+    align-items: center;
+    text-align: center;
+}
+
+.mini2{
+    margin-top: 17vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 49%;
+    font-size: 2.5vh; 
+}
+
+span{
+    color:rgba(252,202,21,255);
+}
+
+
+#button {
+    color: white;
+    border: 0.2rem solid rgba(252,202,21,255);
+    background-color: black;
+    border-radius: 10%;
+    padding: 1rem;
+    font-size: 2vh;
+    font-weight: 1000;
+    font-family: "comfortaa", sans-serif;
+    cursor: pointer;
+    width: 20%;
+}

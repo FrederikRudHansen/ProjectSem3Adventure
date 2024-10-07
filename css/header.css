@@ -78,7 +78,7 @@ header{
     margin-top: 6vh;
 }
 
-#booking, #omos{
+#billeder, #omos{
     margin-left: 1%;
 }
 
@@ -86,10 +86,6 @@ header{
     margin-left: -105%;
 }
 
-
-#indaktilist, #udenaktilist:focus {
-    border-radius: 2.5rem; /* Gør den endnu mere rund, når i fokus */
-}
 
 #Tilbage {
     position: absolute;
