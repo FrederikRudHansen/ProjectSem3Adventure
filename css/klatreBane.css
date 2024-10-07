@@ -1,15 +1,27 @@
 body {
     margin: 0;
+    color: white;
     height: 125vh;
     width: auto;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(0, 0, 0);
     font-family: "Comfortaa", sans-serif;
     text-decoration: none;
-    color: antiquewhite
-   
+    background: linear-gradient(90deg, rgba(0,159,253,255), rgb(0, 0, 0));
 }
 
+#button {
+    margin-top: 64%;
+    margin-left: -78%;
+    color: white;
+    border: 0.15rem solid rgba(252,202,21,255);
+    background-color: black;
+    border-radius: 10%;
+    padding: 1rem;
+    font-size: 2vh;
+    font-weight: 1000;
+    font-family: "comfortaa", sans-serif;
+    cursor: pointer;
+}
