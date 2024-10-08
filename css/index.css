@@ -25,7 +25,7 @@ body {
     height: 100%;
     pointer-events: none;
     
-        background: linear-gradient(90deg, rgba(0,159,253,255), rgb(0, 0, 0));
+    background: linear-gradient(90deg, rgba(0,159,253,255), rgb(0, 0, 0));
 
 }
 
@@ -41,7 +41,8 @@ body {
     object-fit: cover;
     margin-top: 15vh;
     margin-right: 5vh;
-    box-shadow: yellow 10px 10px 10px;
+    box-shadow: black 10px 10px 10px;
+    border-radius: 5%;
 }
 
 @keyframes scroll {
