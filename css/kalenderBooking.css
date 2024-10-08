@@ -4,6 +4,7 @@ body {
   scrollbar-width: none;  /* Skjul scrollbar i Firefox */
   color: white ;
   overflow-x: hidden ;
+  font-family: "Comfortaa", sans-serif;
 }
 
 body::-webkit-scrollbar {
