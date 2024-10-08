@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Kurv</title>
+</head>
+<body>
+    <h1>Din Kurv</h1>
+    <div id="kurvIndhold"></div>
+
+    <button onclick="window.location.href='betaling.html'">Gå til Betaling</button>
+    <button id="clearStorageBtn"> Tøm kurv</button>
+
+    <script>
+        function visKurv() {
+            let kurv = JSON.parse(localStorage.getItem("kurv")) || [];
+            let kurvIndhold = document.getElementById("kurvIndhold");
+
+            if (kurv.length === 0) {
+                kurvIndhold.innerHTML = "<p>Kurven er tom.</p>";
+            } else {
+                let totalPris = 0;
+                kurvIndhold.innerHTML = '<ul>';
+                kurv.forEach(vare => {
+                    kurvIndhold.innerHTML += `<li>${vare.navn} - ${vare.pris} kr.</li>`;
+                    totalPris += vare.pris;
+                });
+                kurvIndhold.innerHTML += '</ul>';
+                kurvIndhold.innerHTML += `<p>Total: ${totalPris} kr.</p>`;
+            }
+        }
+            // Vis kurven, når siden indlæses
+            window.onload = function() {
+            visKurv();
+
+            // Tilføj event listener til knappen efter visning
+            document.getElementById('clearStorageBtn').addEventListener('click', function() {
+                // Ryd lokal lager
+                localStorage.clear();
+                alert('Local storage er ryddet!');
+                visKurv(); // Opdater visningen efter at have tømt kurven
+            });
+        };
+
+    </script>
+
+</body>
+</html>
