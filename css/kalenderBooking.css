@@ -4,6 +4,7 @@ body {
   scrollbar-width: none;  /* Skjul scrollbar i Firefox */
   color: white ;
   overflow-x: hidden ;
+  font-family: "Comfortaa", sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -62,6 +63,8 @@ body::-webkit-scrollbar {
   gap: 5px;
   padding: 10px;
   margin-bottom: 20px;
+  border: 0.2rem solid rgba(252,202,21,255);
+  background-color: black;
 }
 
 .calendar-day {
@@ -79,7 +82,7 @@ body::-webkit-scrollbar {
   font-weight: bold;
   font-size: 1.2em;
   background-color: black;
-  width: 20vh;
+  width: 23vh;
   text-align: center;
   border:  0.2rem solid rgba(252,202,21,255);
   border-radius: 2rem;
@@ -87,12 +90,23 @@ body::-webkit-scrollbar {
 
 #prev-month {
   cursor: pointer;
+  margin-left: 1vh;
 
 }
 #next-month {
   cursor: pointer;
-  margin-right: 1vh;
+  margin-right: 2vh;
 
+}
+#prev-month, #next-month {
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: black;
+  width: 20vh;
+  text-align: center;
+  border:  0.2rem solid rgba(252,202,21,255);
+  border-radius: 2rem;
+  color: white;
 }
 
 #selected-date {
@@ -111,4 +125,18 @@ body::-webkit-scrollbar {
 
 .fakeboks {
   height: 25vh;
+}
+
+.partially-booked {
+  background-color: rgba(252,202,21,255);
+}
+
+.fully-booked {
+  background-color: red;
+}
+
+.booked-time-slot {
+  background-color: red;
+  color: white;
+  cursor: not-allowed;
 }

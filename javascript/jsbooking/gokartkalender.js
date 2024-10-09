@@ -6,7 +6,7 @@ const calendarContainer = document.getElementById('calendar-container');
 const prevMonthButton = document.getElementById('prev-month');
 const nextMonthButton = document.getElementById('next-month');
 const currentMonthLabel = document.getElementById('current-month');
-const selectedDateDisplay = document.getElementById('selected-date'); // Tilføjet linje
+const selectedDateLabel = document.getElementById('selected-date');
 let currentYear = new Date().getFullYear();
 let currentMonth = new Date().getMonth();
 
@@ -16,10 +16,25 @@ function updateCurrentMonthLabel() {
 }
 
 function generateTimeSlots() {
+  const selectedDate = confirmButton.getAttribute('data-date');
+  const bookings = JSON.parse(localStorage.getItem('gokartudeBookings')) || [];
+  const bookedSlots = bookings
+    .filter(booking => booking.date === selectedDate)
+    .map(booking => booking.time);
+
+  timeSlotsContainer.innerHTML = ''; // Clear previous slots
   for (let hour = 10; hour <= 18; hour++) {
     const timeButton = document.createElement('button');
-    timeButton.textContent = `${hour}:00`;
-    timeButton.addEventListener('click', () => selectTime(`${hour}:00`));
+    const time = `${hour}:00`;
+    timeButton.textContent = time;
+    
+    if (bookedSlots.includes(time)) {
+      timeButton.classList.add('booked-time-slot');
+      timeButton.disabled = true;
+    } else {
+      timeButton.addEventListener('click', () => selectTime(time));
+    }
+
     timeSlotsContainer.appendChild(timeButton);
   }
 }
@@ -27,24 +42,19 @@ function generateTimeSlots() {
 function selectTime(time) {
   confirmButton.setAttribute('data-time', time);
   confirmButton.style.display = 'inline';
-  
-  // Opdater det viste valgte tidspunkt
-  const selectedTimeLabel = document.getElementById('selected-time');
-  selectedTimeLabel.textContent = `Valgt tidspunkt: ${time}`;
-  selectedTimeLabel.style.display = 'block'; // Gør det synligt
+  selectedDateLabel.textContent = `Valgt tid: ${time}`;
+  const selectedTimeElement = document.getElementById('selected-time');
+  selectedTimeElement.textContent = `Valgt tid: ${time}`;
+  selectedTimeElement.style.display = 'block'; 
 }
 
 function selectDate(year, month, day) {
   const selectedDate = new Date(year, month, day);
   const dayOptions = { weekday: 'long', day: 'numeric', month: 'long' };
   const formattedDate = selectedDate.toLocaleDateString('da-DK', dayOptions);
-  
-  // Opdater den valgte dato i HTML
-  selectedDateDisplay.textContent = `Valgt dato: ${formattedDate}`;
-
   confirmButton.setAttribute('data-date', formattedDate);
+  selectedDateLabel.textContent = `Valgt dato: ${formattedDate}`;
   timeSelectionDiv.style.display = 'block';
-  timeSlotsContainer.innerHTML = '';
   generateTimeSlots();
 }
 
@@ -52,10 +62,28 @@ function generateCalendar(year, month) {
   const date = new Date(year, month, 1);
   const monthDays = new Date(year, month + 1, 0).getDate();
   calendarContainer.innerHTML = '';
+  const bookings = JSON.parse(localStorage.getItem('gokartudeBookings')) || [];
+  
   for (let day = 1; day <= monthDays; day++) {
     const dayButton = document.createElement('button');
     dayButton.textContent = day;
     dayButton.classList.add('calendar-day');
+
+    const dayBookings = bookings.filter(booking => {
+      const bookingDate = new Date(booking.timestamp);
+      return bookingDate.getDate() === day &&
+             bookingDate.getMonth() === month &&
+             bookingDate.getFullYear() === year;
+    });
+
+    if (dayBookings.length > 0) {
+      if (dayBookings.length === 9) {
+        dayButton.classList.add('fully-booked');
+      } else {
+        dayButton.classList.add('partially-booked');
+      }
+    }
+
     dayButton.addEventListener('click', () => selectDate(year, month, day));
     calendarContainer.appendChild(dayButton);
   }
@@ -84,16 +112,19 @@ confirmButton.addEventListener('click', () => {
   const selectedDate = confirmButton.getAttribute('data-date');
   const selectedTime = confirmButton.getAttribute('data-time');
   const booking = `${selectedDate} kl ${selectedTime}`;
-  let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+  let bookings = JSON.parse(localStorage.getItem('gokartudeBookings')) || [];
   const newBooking = {
     date: selectedDate,
     time: selectedTime,
     timestamp: new Date(`${currentYear}-${currentMonth + 1}-${selectedDate.split(' ')[1]} ${selectedTime}`).getTime()
   };
   bookings.push(newBooking);
-  localStorage.setItem('bookings', JSON.stringify(bookings));
+  localStorage.setItem('gokartudeBookings', JSON.stringify(bookings));
   displaySortedBookings();
   alert(`Du har booket: ${booking}`);
+
+  location.reload();
+
 });
 
 function addBookingToList(booking, index) {
@@ -109,19 +140,20 @@ function addBookingToList(booking, index) {
 }
 
 function deleteBooking(index) {
-  let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+  let bookings = JSON.parse(localStorage.getItem('gokartudeBookings')) || [];
   bookings.splice(index, 1);
-  localStorage.setItem('bookings', JSON.stringify(bookings));
+  localStorage.setItem('gokartudeBookings', JSON.stringify(bookings));
   displaySortedBookings();
 }
 
 function displaySortedBookings() {
   bookingsList.innerHTML = '';
-  let savedBookings = JSON.parse(localStorage.getItem('bookings')) || [];
+  let savedBookings = JSON.parse(localStorage.getItem('gokartudeBookings')) || [];
   savedBookings.sort((a, b) => a.timestamp - b.timestamp);
   savedBookings.forEach(addBookingToList);
 }
 
-generateTimeSlots();
-displaySortedBookings();
-generateCalendar(currentYear, currentMonth);
+document.addEventListener('DOMContentLoaded', () => {
+    generateCalendar(currentYear, currentMonth); 
+    displaySortedBookings(); 
+});
