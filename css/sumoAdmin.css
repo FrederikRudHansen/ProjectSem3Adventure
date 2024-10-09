@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: rgba(0,159,253,255);
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #fcca15;
+}
+
+#calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#calendar-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+.calendar-day {
+    padding: 10px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+.calendar-day:hover {
+    background-color: #bbb;
+}
+
+#current-month {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #fcca15;
+}
+
+#instructor-section {
+    margin-top: 20px;
+}
+
+#confirm-button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.booking-item {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #fcca15;  
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+}
