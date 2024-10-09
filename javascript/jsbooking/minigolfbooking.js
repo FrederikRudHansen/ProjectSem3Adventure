@@ -16,10 +16,25 @@ function updateCurrentMonthLabel() {
 }
 
 function generateTimeSlots() {
+  const selectedDate = confirmButton.getAttribute('data-date');
+  const bookings = JSON.parse(localStorage.getItem('minigolfBookings')) || [];
+  const bookedSlots = bookings
+    .filter(booking => booking.date === selectedDate)
+    .map(booking => booking.time);
+
+  timeSlotsContainer.innerHTML = ''; // Clear previous slots
   for (let hour = 10; hour <= 18; hour++) {
     const timeButton = document.createElement('button');
-    timeButton.textContent = `${hour}:00`;
-    timeButton.addEventListener('click', () => selectTime(`${hour}:00`));
+    const time = `${hour}:00`;
+    timeButton.textContent = time;
+    
+    if (bookedSlots.includes(time)) {
+      timeButton.classList.add('booked-time-slot');
+      timeButton.disabled = true;
+    } else {
+      timeButton.addEventListener('click', () => selectTime(time));
+    }
+
     timeSlotsContainer.appendChild(timeButton);
   }
 }
@@ -33,7 +48,6 @@ function selectTime(time) {
   selectedTimeElement.style.display = 'block'; 
 }
 
-
 function selectDate(year, month, day) {
   const selectedDate = new Date(year, month, day);
   const dayOptions = { weekday: 'long', day: 'numeric', month: 'long' };
@@ -41,7 +55,6 @@ function selectDate(year, month, day) {
   confirmButton.setAttribute('data-date', formattedDate);
   selectedDateLabel.textContent = `Valgt dato: ${formattedDate}`;
   timeSelectionDiv.style.display = 'block';
-  timeSlotsContainer.innerHTML = '';
   generateTimeSlots();
 }
 
@@ -49,10 +62,28 @@ function generateCalendar(year, month) {
   const date = new Date(year, month, 1);
   const monthDays = new Date(year, month + 1, 0).getDate();
   calendarContainer.innerHTML = '';
+  const bookings = JSON.parse(localStorage.getItem('minigolfBookings')) || [];
+  
   for (let day = 1; day <= monthDays; day++) {
     const dayButton = document.createElement('button');
     dayButton.textContent = day;
     dayButton.classList.add('calendar-day');
+
+    const dayBookings = bookings.filter(booking => {
+      const bookingDate = new Date(booking.timestamp);
+      return bookingDate.getDate() === day &&
+             bookingDate.getMonth() === month &&
+             bookingDate.getFullYear() === year;
+    });
+
+    if (dayBookings.length > 0) {
+      if (dayBookings.length === 9) {
+        dayButton.classList.add('fully-booked');
+      } else {
+        dayButton.classList.add('partially-booked');
+      }
+    }
+
     dayButton.addEventListener('click', () => selectDate(year, month, day));
     calendarContainer.appendChild(dayButton);
   }
@@ -91,6 +122,8 @@ confirmButton.addEventListener('click', () => {
   localStorage.setItem('minigolfBookings', JSON.stringify(bookings));
   displaySortedBookings();
   alert(`Du har booket: ${booking}`);
+  location.reload();
+
 });
 
 function addBookingToList(booking, index) {
@@ -119,9 +152,7 @@ function displaySortedBookings() {
   savedBookings.forEach(addBookingToList);
 }
 
-// Initialize calendar and other components when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    generateCalendar(currentYear, currentMonth); // Create the calendar
-    generateTimeSlots(); // Create time slots
-    displaySortedBookings(); // Display existing bookings
+    generateCalendar(currentYear, currentMonth); 
+    displaySortedBookings(); 
 });

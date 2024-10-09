@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Booking Kalender</title>
-  <link rel="stylesheet" href="../css/kalenderBooking.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/kalenderBooking.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
@@ -21,34 +24,34 @@
         </div>
         <div class="navbar">
             <ul>
-                <div id="indakti">
-                    <li>Indendørs Aktiviteter</li>
-                    <li>
-                        <select id="indaktilist" name="indaktilist">
-                            <option>Vælg en aktivitet</option>
-                            <option value="sumo.html">Sumo Wrestling</option>
-                            <option value="minigolfInde.html">Minigolf</option>
-                            <option value="arkade.html">Arcade</option>
-                            <option value="gokart.html">Gokart</option>
-                            <option value="paintball.html">Paintball</option>
-                            <option value="karaoke.html">Karaoke</option>
-                            <option value="trampoliner.html">Trampolin Park</option>
-                        </select>
-                    </li>
-                </div>
-                <div id="udenakti">
-                    <li>Udendørs Aktiviteter</li>
-                    <li>
-                        <select id="udenaktilist" name="udenaktilist">
-                            <option>Vælg en aktivitet</option>
-                            <option value="klatrebane.html">Klatreskov</option>
-                            <option value="minigolfUde.html">Minigolf</option>
-                            <option value="gokart.html">Gokart</option>
-                            <option value="paintballUde.html">Udendørs Paintball</option>
-                        </select>
-                    </li>
-                </div>
-                <li><a id="booking" href="booking.html">Billeder</a></li>
+            <div id="indakti">
+                <li>Indendørs Aktiviteter</li>
+                <li>
+                    <select id="indaktilist" name="indaktilist" >
+                        <option >Vælg en aktivitet</option>
+                        <option value="sumo.html">Sumo Wrestling</option>
+                        <option value="minigolfInde.html">Minigolf</option>
+                        <option value="arkade.html">Arkade</option>
+                        <option value="gokart.html" >Gokart</option>
+                        <option value="paintball.html">Paintball</option>
+                        <option value="karaoke.html">Karaoke</option>
+                        <option value="trampoliner.html">Trampolin Park</option>
+                    </select>
+                </li>
+            </div>
+            <div id="udenakti">
+                <li>Udendørs Aktiviteter</li>
+                <li>
+                    <select id="udenaktilist" name="udenaktilist" >
+                        <option>Vælg en aktivitet</option>
+                        <option value="klatrebane.html">Klatreskov</option>
+                        <option value="minigolfUde.html">Minigolf</option>
+                        <option value="gokartUde.html">Gokart</option>
+                        <option value="paintballUde.html">Paintball</option>
+                    </select>
+                </li>
+            </div>
+                <li><a id="billeder" href="billeder.html">Billeder</a></li>
                 <li><a id="omos" href="omos.html">Om Os</a></li>
             </ul>
         </div>
@@ -71,7 +74,7 @@
     <button id="confirm-button">Bekræft</button>
 
     <div id="bookings"> 
-        <h2>Minigolf indendørs reservationer</h2>
+        <h2>SUMO reservationer</h2>
         <div id="bookings-list"></div>
     </div>
     <div class="fakeboks">
@@ -96,7 +99,7 @@
         </div>
     </footer>
 
-    <script src="../javascript/jsbooking/minigolfbooking.js"></script>
+    <script src="../javascript/jsbooking/sumobookingkunde.js"></script>
     <script src="../javascript/dropdown.js"></script>
 
 </body>

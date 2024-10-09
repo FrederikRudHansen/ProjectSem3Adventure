@@ -17,7 +17,7 @@ function updateCurrentMonthLabel() {
 
 function generateTimeSlots() {
   const selectedDate = confirmButton.getAttribute('data-date');
-  const bookings = JSON.parse(localStorage.getItem('paintballudeBookings')) || [];
+  const bookings = JSON.parse(localStorage.getItem('paintballIndeBookings')) || [];
   const bookedSlots = bookings
     .filter(booking => booking.date === selectedDate)
     .map(booking => booking.time);
@@ -62,7 +62,7 @@ function generateCalendar(year, month) {
   const date = new Date(year, month, 1);
   const monthDays = new Date(year, month + 1, 0).getDate();
   calendarContainer.innerHTML = '';
-  const bookings = JSON.parse(localStorage.getItem('paintballudeBookings')) || [];
+  const bookings = JSON.parse(localStorage.getItem('paintballIndeBookings')) || [];
   
   for (let day = 1; day <= monthDays; day++) {
     const dayButton = document.createElement('button');
@@ -112,14 +112,14 @@ confirmButton.addEventListener('click', () => {
   const selectedDate = confirmButton.getAttribute('data-date');
   const selectedTime = confirmButton.getAttribute('data-time');
   const booking = `${selectedDate} kl ${selectedTime}`;
-  let bookings = JSON.parse(localStorage.getItem('paintballudeBookings')) || [];
+  let bookings = JSON.parse(localStorage.getItem('paintballIndeBookings')) || [];
   const newBooking = {
     date: selectedDate,
     time: selectedTime,
     timestamp: new Date(`${currentYear}-${currentMonth + 1}-${selectedDate.split(' ')[1]} ${selectedTime}`).getTime()
   };
   bookings.push(newBooking);
-  localStorage.setItem('paintballudeBookings', JSON.stringify(bookings));
+  localStorage.setItem('paintballIndeBookings', JSON.stringify(bookings));
   displaySortedBookings();
   alert(`Du har booket: ${booking}`);
   location.reload();
@@ -130,24 +130,19 @@ function addBookingToList(booking, index) {
   const bookingItem = document.createElement('div');
   bookingItem.classList.add('booking-item');
   bookingItem.textContent = `${booking.date} kl ${booking.time}`;
-  const deleteButton = document.createElement('button');
-  deleteButton.textContent = 'Slet';
-  deleteButton.style.marginLeft = '10px';
-  deleteButton.addEventListener('click', () => deleteBooking(index));
-  bookingItem.appendChild(deleteButton);
   bookingsList.appendChild(bookingItem);
 }
 
 function deleteBooking(index) {
-  let bookings = JSON.parse(localStorage.getItem('p')) || [];
+  let bookings = JSON.parse(localStorage.getItem('paintballIndeBookings')) || [];
   bookings.splice(index, 1);
-  localStorage.setItem('paintballudeBookings', JSON.stringify(bookings));
+  localStorage.setItem('paintballIndeBookings', JSON.stringify(bookings));
   displaySortedBookings();
 }
 
 function displaySortedBookings() {
   bookingsList.innerHTML = '';
-  let savedBookings = JSON.parse(localStorage.getItem('paintballudeBookings')) || [];
+  let savedBookings = JSON.parse(localStorage.getItem('paintballIndeBookings')) || [];
   savedBookings.sort((a, b) => a.timestamp - b.timestamp);
   savedBookings.forEach(addBookingToList);
 }

@@ -130,11 +130,6 @@ function addBookingToList(booking, index) {
   const bookingItem = document.createElement('div');
   bookingItem.classList.add('booking-item');
   bookingItem.textContent = `${booking.date} kl ${booking.time}`;
-  const deleteButton = document.createElement('button');
-  deleteButton.textContent = 'Slet';
-  deleteButton.style.marginLeft = '10px';
-  deleteButton.addEventListener('click', () => deleteBooking(index));
-  bookingItem.appendChild(deleteButton);
   bookingsList.appendChild(bookingItem);
 }
 
