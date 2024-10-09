@@ -7,6 +7,7 @@
     <title>Betalingsside</title>
 </head>
 <body>
+
 <div class="payment-container">
     <h2>Betaling</h2>
     <form id="paymentForm" onsubmit="return validateForm()">
@@ -32,6 +33,7 @@
 
         <input type="submit" value="Betal nu">
     </form>
+    <button id="Tilbage" onclick="goBack()">Tilbage</button>
 </div>
 
 <script>
@@ -85,6 +87,9 @@
 
         return isValid;
     }
+    function goBack() {
+            history.back();
+            }
 </script>
 
 </body>
