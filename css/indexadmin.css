@@ -28,7 +28,7 @@ body {
     overflow: hidden;
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.6);
     transition: transform 0.3s ease;
     background-color: orange;
 }
@@ -45,4 +45,16 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+}
+
+#Instruktør {
+    position: absolute;
+    margin-left: 30%;
+    top: 45%;
+}
+
+#Kalender {
+    position: absolute;
+    margin-left: 30%;
+    top: 45%;
 }
