@@ -24,7 +24,7 @@
                 </a>
             </div>
             <div class="navbar">
-                <ul>
+                    <ul>
                 <div id="indakti">
                     <li>Indendørs Aktiviteter</li>
                     <li>
@@ -40,6 +40,7 @@
                         </select>
                     </li>
                 </div>
+                
                 <div id="udenakti">
                     <li>Udendørs Aktiviteter</li>
                     <li>
@@ -63,8 +64,7 @@
                 Velkommen til vores madbod!
             </h1>
 
-            <p> 
-            Her kan du forudbestille mad og drikkevarer til din aktivitet. Køb f.eks. sodavand såsom coca cola, pepsi max og meget mere!
+            <p> Her kan du forudbestille mad og drikkevarer til din aktivitet. Køb f.eks. sodavand såsom coca cola, pepsi max og meget mere!
             <br> Hvis du er sulten kan du købe en toast eller en portion havregrynd uden mælk i vores cafe!
             <br> For at gå til betaling klik på indkøbskurven øverst til højre
             </p>
@@ -75,6 +75,7 @@
             <img src="../billeder/shopping-cart.png" alt="Shopping Cart" style="width:10vh; height:10vh;">
             <span id="kurvTæller">0</span>
             </a>
+        </div>
 
         <script>
             let kurvAntal = 0;
@@ -86,30 +87,29 @@
             
 
             function tilfoejTilKurv(vareNavn, pris) {
-    // Hent eksisterende kurv fra localStorage
-    let kurv = JSON.parse(localStorage.getItem("kurv")) || [];
+                // Hent eksisterende kurv fra localStorage
+                let kurv = JSON.parse(localStorage.getItem("kurv")) || [];
 
-    // Tilføj ny vare til kurven
-    kurv.push({ navn: vareNavn, pris: pris });
+                // Tilføj ny vare til kurven
+                kurv.push({ navn: vareNavn, pris: pris });
 
-    // Gem den opdaterede kurv tilbage i localStorage
-    localStorage.setItem("kurv", JSON.stringify(kurv));
+                // Gem den opdaterede kurv tilbage i localStorage
+                localStorage.setItem("kurv", JSON.stringify(kurv));
 
-    // Opdater kurv-ikonet (tæller)
-    opdaterKurvTæller();
-}
+                // Opdater kurv-ikonet (tæller)
+                opdaterKurvTæller();
+            }
 
-function opdaterKurvTæller() {
-    let kurv = JSON.parse(localStorage.getItem("kurv")) || [];
-    document.getElementById("kurvTæller").innerText = kurv.length;
-}
+            function opdaterKurvTæller() {
+                let kurv = JSON.parse(localStorage.getItem("kurv")) || [];
+                document.getElementById("kurvTæller").innerText = kurv.length;
+            }
 
-// Kald opdaterKurvTæller når siden indlæses
-window.onload = opdaterKurvTæller;
+            // Kald opdaterKurvTæller når siden indlæses
+            window.onload = opdaterKurvTæller;
 
         </script>
-        </div>
-        
+       
 
     </div>        
         <div class="mad-container">
@@ -170,6 +170,7 @@ window.onload = opdaterKurvTæller;
                 <button onclick="window.location.href='login.html'" id="knap">Administrator login
             </div>
         </footer>
+
         <script>
             function goBack() {
             history.back();

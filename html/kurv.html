@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Min Kurv</title>
+    <link rel="stylesheet" href="../css/kurv.css">
 </head>
 <body>
-    <h1>Din Kurv</h1>
+    <div class="kurv">
+    <h1>Din kurv</h1>
     <div id="kurvIndhold"></div>
 
-    <button onclick="window.location.href='betaling.html'">Gå til Betaling</button>
+    <button onclick="gåTilBetaling()">Gå til Betaling</button>
     <button id="clearStorageBtn"> Tøm kurv</button>
+</div>
 
     <script>
         function visKurv() {
@@ -43,7 +46,18 @@
             });
         };
 
+        function gåTilBetaling() {
+            // Tømmer localStorage når man klikker gå til betaling
+            localStorage.clear();
+
+            // Omdirigerer til betaling.html
+            window.location.href = 'betaling.html';
+        }
+
     </script>
 
+<button id="Tilbage" onclick="goBack()">Tilbage</button>
+
+</div>
 </body>
 </html>
