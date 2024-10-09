@@ -1,0 +1,182 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">  
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Madbod</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/madBod.css">
+        
+    </head>
+
+    <body>
+        <header>
+            <div class="logo-cont">
+                <a href="index.html">
+                    <img src="../billeder/logoadventure.png" id="logo" alt="Adventure Logo">
+                </a>
+            </div>
+            <div class="navbar">
+                    <ul>
+                <div id="indakti">
+                    <li>Indendørs Aktiviteter</li>
+                    <li>
+                        <select id="indaktilist" name="indaktilist">
+                            <option >Vælg en aktivitet</option>
+                            <option value="sumo.html">Sumo Wrestling</option>
+                            <option value="minigolfInde.html">Minigolf</option>
+                            <option value="arkade.html">Arcade</option>
+                            <option value="gokart.html" >Gokart</option>
+                            <option value="paintball.html">Paintball</option>
+                            <option value="karaoke.html">Karaoke</option>
+                            <option value="trampoliner.html">Trampolin Park</option>
+                        </select>
+                    </li>
+                </div>
+                
+                <div id="udenakti">
+                    <li>Udendørs Aktiviteter</li>
+                    <li>
+                        <select id="udenaktilist" name="udenaktilist">
+                            <option>Vælg en aktivitet</option>
+                            <option value="klatrebane.html">Klatreskov</option>
+                            <option value="minigolfUde.html">Minigolf</option>
+                            <option value="gokart.html">Gokart</option>
+                        </select>
+                    </li>
+                </div>
+                    <li><a id="booking" href="booking.html">Billeder</a></li>
+                    <li><a id="omos" href="omos.html">Om Os</a></li>
+                </ul>
+            </div>
+            <button id="Tilbage" onclick="goBack()">Tilbage</button>
+        </header>
+
+        <div class="madbod-text">
+            <h1> 
+                Velkommen til vores madbod!
+            </h1>
+
+            <p> Her kan du forudbestille mad og drikkevarer til din aktivitet. Køb f.eks. sodavand såsom coca cola, pepsi max og meget mere!
+            <br> Hvis du er sulten kan du købe en toast eller en portion havregrynd uden mælk i vores cafe!
+            <br> For at gå til betaling klik på indkøbskurven øverst til højre
+            </p>
+        </div>
+
+        <div id="kurvContainer">
+            <a href="kurv.html">
+            <img src="../billeder/shopping-cart.png" alt="Shopping Cart" style="width:10vh; height:10vh;">
+            <span id="kurvTæller">0</span>
+            </a>
+        </div>
+
+        <script>
+            let kurvAntal = 0;
+
+            function tilfoejTilKurv() {
+                kurvAntal++;  // Øger tælleren med 1 hver gang der klikkes på knappen
+                document.getElementById('kurvTæller').textContent = kurvAntal;  // Opdaterer tælleren
+            }
+            
+
+            function tilfoejTilKurv(vareNavn, pris) {
+                // Hent eksisterende kurv fra localStorage
+                let kurv = JSON.parse(localStorage.getItem("kurv")) || [];
+
+                // Tilføj ny vare til kurven
+                kurv.push({ navn: vareNavn, pris: pris });
+
+                // Gem den opdaterede kurv tilbage i localStorage
+                localStorage.setItem("kurv", JSON.stringify(kurv));
+
+                // Opdater kurv-ikonet (tæller)
+                opdaterKurvTæller();
+            }
+
+            function opdaterKurvTæller() {
+                let kurv = JSON.parse(localStorage.getItem("kurv")) || [];
+                document.getElementById("kurvTæller").innerText = kurv.length;
+            }
+
+            // Kald opdaterKurvTæller når siden indlæses
+            window.onload = opdaterKurvTæller;
+
+        </script>
+       
+
+    </div>        
+        <div class="mad-container">
+            <div class="mad-boks">
+                <img src="../billeder/cola.png" alt="cola">
+                <p>Cola - 15 kr. <button id="tilfoejCola" onclick="tilfoejTilKurv('Cola', 15)">Tilføj til kurv</button></p>
+            </div>
+            <div class="mad-boks">
+                <img src="../billeder/fanta.png" alt="fanta">
+                <p>Fanta - 15 kr. <button id="tilfoejFanta" onclick="tilfoejTilKurv('Fanta', 15)">Tilføj til kurv</button></p>
+            </div>
+            <div class="mad-boks">
+                <img src="../billeder/pepsiMax.png" alt="pepsi max">
+                <p>Pepsi Max - 15 kr. <button id="tilfoejPepsiMax" onclick="tilfoejTilKurv('Pepsi Max', 15)">Tilføj til kurv</button></p>
+            </div>
+            <div class="mad-boks">
+                <img src="../billeder/vand.png" alt="vand">
+                <p>Vand - 10 kr. <button id="tilfoejVand" onclick="tilfoejTilKurv('Vand', 10)">Tilføj til kurv</button></p>
+            </div>
+            <div class="mad-boks">
+                <img src="../billeder/toast.png" alt="toast">
+                <p>Toast - 20 kr. <button id="tilfoejToast" onclick="tilfoejTilKurv('Toast', 20)">Tilføj til kurv</button></p>
+            </div>
+            <div class="mad-boks">
+                <img src="../billeder/havregryn.png" alt="havregryn">
+                <p>Havregryn - 10 kr. <button id="tilfoejHavregryn" onclick="tilfoejTilKurv('Havregryn', 10)">Tilføj til kurv</button></p>
+            </div>
+            <div class="mad-boks">
+                <img src="../billeder/haribo.png" alt="haribo">
+                <p>Haribo - 25 kr. <button id="tilfoejHaribo" onclick="tilfoejTilKurv('Haribo', 25)">Tilføj til kurv</button></p>
+            </div>
+            <div class="mad-boks">
+                <img src="../billeder/nsfw.webp" alt="miaMalkovaPanties">
+                <p>Mia Malkova Special - 50 kr. <button id="tilfoejMiaMalkovaSpecial" onclick="tilfoejTilKurv('Mia Malko Special', 50)">Tilføj til kurv</button></p>
+            </div>
+            <div class="mad-boks">
+                <img src="../billeder/Madboks.png" alt="Madboks">
+                <p>Madboks - 40 kr. <button id="tilfoejMadboks" onclick="tilfoejTilKurv('Madboks', 40)">Tilføj til kurv</button></p>
+            </div>
+        </div>
+        
+
+
+        <footer>
+            <div class="text-cont-1">
+                <ul>
+                    <li>Kontaktinformation:</li>
+                    <li>📞+45 6178 6667</li>
+                    <li>📧adventurepark@gmail.com</li>
+                    <li>📍Rådhusdammen 122 2620 Albertslund</li>
+                </ul>
+            </div>
+            <div class="billedelogo">
+                <img  src="../billeder/logoadventure.png" alt="" id="logo"> 
+            </div>
+            <div class="text-cont-2">
+                Medarbejder login:
+                <button onclick="window.location.href='login.html'" id="knap">Administrator login
+            </div>
+        </footer>
+
+        <script>
+            function goBack() {
+            history.back();
+            }
+        </script>
+
+        <script src="../javascript/dropdown.js"></script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Kurv</title>
+    <link rel="stylesheet" href="../css/kurv.css">
+</head>
+<body>
+    <div class="kurv">
+    <h1>Din kurv</h1>
+    <div id="kurvIndhold"></div>
+
+    <button onclick="gåTilBetaling()">Gå til Betaling</button>
+    <button id="clearStorageBtn"> Tøm kurv</button>
+</div>
+
+    <script>
+        function visKurv() {
+            let kurv = JSON.parse(localStorage.getItem("kurv")) || [];
+            let kurvIndhold = document.getElementById("kurvIndhold");
+
+            if (kurv.length === 0) {
+                kurvIndhold.innerHTML = "<p>Kurven er tom.</p>";
+            } else {
+                let totalPris = 0;
+                kurvIndhold.innerHTML = '<ul>';
+                kurv.forEach(vare => {
+                    kurvIndhold.innerHTML += `<li>${vare.navn} - ${vare.pris} kr.</li>`;
+                    totalPris += vare.pris;
+                });
+                kurvIndhold.innerHTML += '</ul>';
+                kurvIndhold.innerHTML += `<p>Total: ${totalPris} kr.</p>`;
+            }
+        }
+            // Vis kurven, når siden indlæses
+            window.onload = function() {
+            visKurv();
+
+            document.getElementById('clearStorageBtn').addEventListener('click', function() {
+                // Ryd lokal lager
+                localStorage.clear();
+                alert('Kurven er blevet tømt!');
+                visKurv(); // Opdater visningen efter at have tømt kurven
+            });
+        };
+
+        function gåTilBetaling() {
+            // Tømmer localStorage når man klikker gå til betaling
+            localStorage.clear();
+
+            // Omdirigerer til betaling.html
+            window.location.href = 'betaling.html';
+        }
+
+    </script>
+
+<button id="Tilbage" onclick="goBack()">Tilbage</button>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background: linear-gradient(90deg, rgba(0,159,253,255), black); 
+    font-family: "Comfortaa", sans-serif;
+    color: antiquewhite;
+}
+
+.kurv {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+button {
+    color: white;
+    border: 0.15rem solid rgba(252,202,21,255);
+    background-color: black;
+    border-radius: 10%;
+    padding: 0.7rem;
+    font-size: 2vh;
+    font-weight: 1000;
+    font-family: "Comfortaa", sans-serif;
+    cursor: pointer;
+    margin: 10px; /* Giver lidt afstand mellem knapperne */
+}
+
+button:hover {
+    background-color: rgba(252,202,21,255); 
+    color: black; 
+}
+
+
+#Tilbage {
+    position: absolute;
+    top: 8%;
+    left: 89%;
+    color: white;
+    border: 0.15rem solid rgba(252,202,21,255);
+    background-color: black;
+    border-radius: 10%;
+    padding: 1rem;
+    font-size: 2vh;
+    font-weight: 1000;
+    font-family: "comfortaa", sans-serif;
+    cursor: pointer;
+
+}
