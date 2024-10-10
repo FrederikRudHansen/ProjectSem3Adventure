@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap; /* Gør, at billeder brydes til næste række */
     justify-content: space-around; /* Lige plads mellem billederne */
-    gap: 4vh; /* Afstand mellem boksene */
+    gap: 20px; /* Afstand mellem boksene */
     padding: 20px;
     background: linear-gradient(90deg, rgba(0,159,253,255), black);
 }
@@ -11,7 +11,7 @@
     flex: 1 1 calc(33.33% - 20px); /* Tre bokse pr. række med plads til afstand */
     box-sizing: border-box;
     overflow: hidden;
-    box-shadow: yellow 10px 10px 10px;
+    border: 2px solid #ddd;
     border-radius: 8px;
     aspect-ratio: 1;
     background: linear-gradient(90deg, rgba(0,159,253,255), black);
@@ -21,8 +21,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
-    
+    border-radius: 8px; 
 }
 
 .upload-billeder {

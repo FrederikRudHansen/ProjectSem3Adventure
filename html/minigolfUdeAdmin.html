@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instruktør Planlægning</title>
+  <link rel="stylesheet" href="../css/klatrebaneAdmin.css">
+</head>
+<body>
+    <header>
+        <h1>Instruktør Planlægning til udendørs minigolf</h1>
+    </header>
+
+    <h2>Vælg en dato for instruktøren</h2>
+    <div id="calendar-controls">
+        <button id="prev-month">&#9664;</button>
+        <span id="current-month"></span>
+        <button id="next-month">&#9654;</button>
+    </div>
+    <div id="calendar-container"></div>
+
+    <div id="instructor-section" style="display:none;">
+        <h2 id="selected-date"></h2>
+        <h2>Indtast Instruktørens Navn</h2>
+        <input type="text" id="instructor-name" placeholder="Instruktørens navn">
+        <button id="confirm-button">Bekræft Instruktør</button>
+    </div>
+
+    <div id="instructors-list">
+        <h2>Planlagte Instruktører</h2>
+        <div id="instructors-list-container"></div>
+    </div>
+
+    <script src="../javascript/klatrebaneAdmin.js"></script>
+</body>
+</html>
