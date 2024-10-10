@@ -3,51 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/betaling.css">
     <title>Betalingsside</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            margin: 0;
-            padding: 0;
-        }
-        .payment-container {
-            max-width: 400px;
-            margin: 50px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        label {
-            font-size: 14px;
-            color: #333;
-        }
-        input[type="text"], input[type="email"], input[type="number"], input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-        .error {
-            color: red;
-            font-size: 12px;
-        }
-    </style>
 </head>
 <body>
 
@@ -76,6 +33,7 @@
 
         <input type="submit" value="Betal nu">
     </form>
+    <button id="Tilbage" onclick="goBack()">Tilbage</button>
 </div>
 
 <script>
@@ -129,6 +87,9 @@
 
         return isValid;
     }
+    function goBack() {
+            history.back();
+            }
 </script>
 
 </body>

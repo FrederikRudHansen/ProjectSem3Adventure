@@ -276,11 +276,13 @@ body::-webkit-scrollbar {
 }
 
 #prev-month {
-  margin-left: 50vh;
+  cursor: pointer;
+  margin-left: 1vh;
 
 }
 #next-month {
-  margin-right: 47vh;
+  cursor: pointer;
+  margin-right: 2vh;
 
 }
 #prev-month, #next-month {
