@@ -79,3 +79,11 @@ body {
     font-family: 'Comfortaa', sans-serif;
 }
 
+#logo{
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    height: 20%;
+    width: auto;
+}
+
