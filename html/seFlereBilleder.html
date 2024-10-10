@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/seFlereBilleder.css">
+        <link rel="stylesheet" href="../css/index.css">
     </head>
     
     <body>
@@ -28,7 +29,6 @@
                     <li>Indendørs Aktiviteter</li>
                     <li>
                         <select id="indaktilist" name="indaktilist">
-
                             <option >Vælg en aktivitet</option>
                             <option value="sumo.html">Sumo Wrestling</option>
                             <option value="minigolfInde.html">Minigolf</option>
@@ -59,7 +59,12 @@
             <button id="Tilbage" onclick="goBack()">Tilbage</button>
         </header>
         
-    
+        <div class="upload-billeder"> 
+            <h1> Klik på linket for at uploade dine billeder</h1>
+            <button id="upload-billeder" onclick="donothing">Upload billeder </button>
+        </div>
+
+       
 
         <div class="billede-container">
             <div class="boks">
