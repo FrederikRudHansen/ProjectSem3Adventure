@@ -23,3 +23,25 @@
     object-fit: cover;
     border-radius: 8px; 
 }
+
+.upload-billeder {
+    display: flex; 
+    text-align: center;
+    font-weight: 1000;
+    font-family: "Comfortaa", sans-serif;
+    color: white;
+}
+
+#upload-billeder {
+    color: white;
+    border: 0.15rem solid rgba(252,202,21,255);
+    background-color: black;
+    border-radius: 10%;
+    padding: 0.7rem;
+    font-size: 2vh;
+    font-weight: 1000;
+    font-family: "Comfortaa", sans-serif;
+    cursor: pointer;
+    margin: 10px; /* Giver lidt afstand mellem knapperne */ 
+}
+
