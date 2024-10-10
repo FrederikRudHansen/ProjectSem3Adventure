@@ -255,7 +255,7 @@ body::-webkit-scrollbar {
 }
 
 .calendar-day {
-  padding: 10px;
+  padding: 1px;
   background-color: #ddd;
   border: none;
   cursor: pointer;
@@ -277,12 +277,12 @@ body::-webkit-scrollbar {
 
 #prev-month {
   cursor: pointer;
-  margin-left: 1vh;
+  margin-left: 50vh;
 
 }
 #next-month {
   cursor: pointer;
-  margin-right: 2vh;
+  margin-right: 47vh;
 
 }
 #prev-month, #next-month {
