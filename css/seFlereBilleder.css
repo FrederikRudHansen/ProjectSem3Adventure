@@ -26,7 +26,9 @@
 
 .upload-billeder {
     display: flex; 
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     font-weight: 1000;
     font-family: "Comfortaa", sans-serif;
     color: white;
@@ -38,10 +40,15 @@
     background-color: black;
     border-radius: 10%;
     padding: 0.7rem;
-    font-size: 2vh;
+    font-size: 3vh;
     font-weight: 1000;
     font-family: "Comfortaa", sans-serif;
     cursor: pointer;
     margin: 10px; /* Giver lidt afstand mellem knapperne */ 
 }
 
+#header{
+    font-size: 8vh;
+    margin-top: 15vh;
+    margin-bottom: -15vh;
+}
