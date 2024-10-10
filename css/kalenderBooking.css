@@ -24,7 +24,188 @@ body::-webkit-scrollbar {
   cursor: pointer;
   text-align: center;
   width: 20vh;
+  font-size: 3vh;
+  box-shadow: black 10px 10px 10px ;
+
 }
+
+.time-slots button:nth-child(1):hover {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.time-slots button:nth-child(2):hover {
+  animation: fade 2s infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.time-slots button:nth-child(3):hover {
+  animation: rotate 2s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.time-slots button:nth-child(4):hover {
+  animation: zoom 2s infinite;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.time-slots button:nth-child(5):hover {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.time-slots button:nth-child(6):hover {
+  animation: wave 2s infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.time-slots button:hover {
+  animation: rainbow-shadow 2s infinite alternate;
+}
+
+@keyframes rainbow-shadow {
+  0% {
+    box-shadow:
+      0 0 20px rgba(255, 0, 0, 0.8), /* red */
+      0 0 40px rgba(255, 165, 0, 0.8), /* orange */
+      0 0 60px rgba(255, 255, 0, 0.8), /* yellow */
+      0 0 80px rgba(0, 128, 0, 0.8), /* green */
+      0 0 100px rgba(0, 0, 255, 0.8), /* blue */
+      0 0 120px rgba(255, 0, 255, 0.8); /* purple */
+  }
+  50% {
+    box-shadow:
+      0 0 120px rgba(255, 0, 255, 0.8), /* purple */
+      0 0 140px rgba(0, 0, 255, 0.8), /* blue */
+      0 0 160px rgba(0, 128, 0, 0.8), /* green */
+      0 0 180px rgba(255, 255, 0, 0.8), /* yellow */
+      0 0 200px rgba(255, 165, 0, 0.8), /* orange */
+      0 0 220px rgba(255, 0, 0, 0.8); /* red */
+  }
+  75% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow:
+      0 0 20px rgba(255, 0, 0, 0.8), /* red */
+      0 0 40px rgba(255, 165, 0, 0.8), /* orange */
+      0 0 60px rgba(255, 255, 0, 0.8), /* yellow */
+      0 0 80px rgba(0, 128, 0, 0.8), /* green */
+      0 0 100px rgba(0, 0, 255, 0.8), /* blue */
+      0 0 120px rgba(255, 0, 255, 0.8); /* purple */
+  }
+}
+
+.time-slots button:nth-child(7):hover {
+  animation: shake 2s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.time-slots button:nth-child(8):hover {
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+}
+
 
 
 #confirm-button {
@@ -49,6 +230,7 @@ body::-webkit-scrollbar {
   border: 0.2rem solid rgba(252,202,21,255);
   margin: 1vh;
   
+  
 }
 
 #calendar-controls {
@@ -65,6 +247,11 @@ body::-webkit-scrollbar {
   margin-bottom: 20px;
   border: 0.2rem solid rgba(252,202,21,255);
   background-color: black;
+  width: 50%;
+  position: relative;
+  margin-left: 25%;
+  height: 100%;
+ 
 }
 
 .calendar-day {
@@ -72,6 +259,7 @@ body::-webkit-scrollbar {
   background-color: #ddd;
   border: none;
   cursor: pointer;
+  font-size: 3vh;
 }
 
 .calendar-day:hover {
@@ -82,9 +270,8 @@ body::-webkit-scrollbar {
   font-weight: bold;
   font-size: 1.2em;
   background-color: black;
-  width: 23vh;
-  text-align: center;
-  border:  0.2rem solid rgba(252,202,21,255);
+  padding: 1%;
+  border: 0.2rem solid rgba(252,202,21,255);
   border-radius: 2rem;
 }
 
@@ -99,10 +286,11 @@ body::-webkit-scrollbar {
 
 }
 #prev-month, #next-month {
+  cursor: pointer;
   font-weight: bold;
   font-size: 1.2em;
   background-color: black;
-  width: 20vh;
+  width: 6vw;
   text-align: center;
   border:  0.2rem solid rgba(252,202,21,255);
   border-radius: 2rem;
@@ -139,4 +327,9 @@ body::-webkit-scrollbar {
   background-color: red;
   color: white;
   cursor: not-allowed;
+}
+
+#titel {
+  position: relative;
+  left: 75vh;
 }
