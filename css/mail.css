@@ -1,0 +1,19 @@
+body{
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 4vh;
+    font-weight: bold;
+    height: 70vh;
+}
+
+span{
+    color: rgba(252,202,21,255);
+}
+
+.mail-container{
+    height: 100%;
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+}
+
