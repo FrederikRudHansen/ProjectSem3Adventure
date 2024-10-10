@@ -9,7 +9,7 @@ const instructorsListContainer = document.getElementById('instructors-list-conta
 let currentYear = new Date().getFullYear();
 let currentMonth = new Date().getMonth();
 
-// Unique key for the Klatrebane page
+// Unique key for the Indendørs Gokart page
 const storageKey = 'klatrebaneAdmin.html'; // Adjust based on your specific page
 
 function updateCurrentMonthLabel() {
